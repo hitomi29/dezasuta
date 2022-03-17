@@ -42,7 +42,7 @@ img {
 }
 
 header {
-    width: 960px;
+    max-width: 960px;
     margin: 20px auto;
     display: flex;
     justify-content: space-between;
@@ -63,7 +63,6 @@ header ul li:last-child {
 
 @media screen and (max-width: 767px) {
     header {
-        width: 100%;
         display: block;
         margin: 20px;
     }
@@ -73,8 +72,10 @@ header ul li:last-child {
     header ul li {
         border-right: none;
         border-bottom: 1px solid #000;
+        margin-right: 0px;
     }
     header ul li:last-child {
         border-bottom: 1px solid #000;
+        margin-right: 0px;
     }
 }
