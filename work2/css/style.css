@@ -1,4 +1,5 @@
-@charset "utf-8";
+@charset "UTF-8";
+
 /* cssリセット */
 
 /*利用するタグによってこちらの内容は増やす*/
@@ -40,40 +41,41 @@ img {
     border: none;
 }
 
-.wrap {
-    display: flex;
+header {
     width: 960px;
-    margin: auto;
-    justify-content: space-between;
-}
-.wrap div {
-    width: 30%;
-    height: 300px;
-    line-height: 300px;
-    text-align: center;
-    background: red;
-}
-.wrap2 {
+    margin: 20px auto;
     display: flex;
-    width: 960px;
-    margin: auto;
     justify-content: space-between;
-    flex-wrap: wrap;
+    align-items: center;
 }
-.wrap2 div {
-    width: 300px;
-    height: 300px;
-    line-height: 300px;
-    text-align: center;
-    background: blue;
+header ul {
+    display: flex;
+    padding: 10px 0;
+}
+header ul li {
+    margin-right: 30px;
+    padding: 10px 30px 10px 0px;
+    border-right: 1px solid #000;
+}
+header ul li:last-child {
+    border: none;
 }
 
-@media screen and (max-width: 499px) {
-    .wrap {
+@media screen and (max-width: 767px) {
+    header {
+        width: 100%; 
+        display: block;
+        margin: 20px;
+    }
+    }
+    header ul {
         display: block;
     }
-    .wrap div {
-        width: 100%;
-        margin-bottom: 20px;
+    header ul li {
+        border-right: none;
+        border-bottom: 1px solid #000;
+    }
+    header ul li:last-child {
+        border-bottom: 1px solid #000;
     }
 }
