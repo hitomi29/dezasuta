@@ -63,10 +63,9 @@ header ul li:last-child {
 
 @media screen and (max-width: 767px) {
     header {
-        width: 100%; 
+        width: 100%;
         display: block;
         margin: 20px;
-    }
     }
     header ul {
         display: block;
