@@ -1,0 +1,367 @@
+@charset "uft-8";
+/* cssリセット */
+
+/*利用するタグによってこちらの内容は増やす*/
+
+body,
+h1,
+h2,
+h3,
+ul,
+li,
+p {
+    margin: 0;
+    margin: 0;
+    margin: 0;
+    padding: 0;
+    line-height: 1;
+    /*デフォルトの文字色、font-familyを予め当てておく*/
+    color: #777;
+    font-family: Georgia, 游明朝, YuMincho, "Hiragino Mincho ProN", Meiryo,
+        serif;
+}
+
+a {
+    /*下線を消す*/
+    text-decoration: none;
+    /*色を消す*/
+    color: inherit;
+}
+
+ul {
+    /*左の「・」を消す*/
+    list-style: none;
+}
+
+img {
+    max-width: 100%;
+    vertical-align: bottom;
+    border: none;
+}
+
+body {
+    max-width: 1024px;
+    margin: 60px auto;
+    font-size: 18px;
+}
+/* ヘッダー */
+.site-top {
+    display: flex;
+    justify-content: space-between;
+}
+.site-blanding h1 {
+    color: #111;
+    font-size: 36px;
+    font-weight: bold;
+}
+.site-blanding p {
+    padding-top: 7px;
+}
+.site-navigation {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 70px;
+}
+.site-navigation ul {
+    display: flex;
+    margin-top: 45px;
+}
+.site-navigation ul li {
+    color: #111;
+    padding-right: 30px;
+    font-size: 16px;
+}
+.fa-solid {
+    padding-left: 10px;
+}
+.serch-icon {
+    color: #111;
+    margin-top: 45px;
+    font-size: 24px;
+} 
+img {
+    width: 100%;
+    margin-bottom: 90px;
+}
+.home-text p {
+    font-size: 27px;
+    line-height: 48px;
+    margin-bottom: 105px;
+}
+/* メイン */
+article {
+    display: flex;
+    margin-bottom: 75px;
+}
+
+article div:first-child {
+    flex: 1;
+}
+
+article div:last-child {
+    flex: 2;
+}
+article h2 {
+    font-size: 22px;
+    color: #111;
+    margin-bottom: 24px;
+}
+article p {
+    line-height: 32px;
+}
+.nav-links {
+    display: flex;
+    justify-content: center;
+    margin-top: 75px;
+    margin-bottom: 105px;
+}
+.nav-links a {
+    font-weight: bold;
+    padding: 8px 18px;
+    border: 1px solid #e6e6e6;
+    margin-right: 6px;
+}
+/* フッター上部*/
+footer {
+    border-top: 1px solid #e6e6e6;
+    padding-top: 75px;
+}
+.footer-widget-table {
+    display: flex;
+    margin-bottom: 80px;
+}
+.footer-widget-table > div {
+    flex: 1;
+}
+.footer-widget-table h2 {
+    color: #111;
+    font-size: 14px;
+    margin-bottom: 30px;
+}
+.footer-widget1 {
+    padding-right: 75px;
+    display: flex;
+    flex-wrap: wrap;
+}
+.footer-widget1 img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+.profirewidget-meta {
+    text-align: center;
+    margin-top: 25px;
+}
+.profirewidget-meta strong {
+    color: #333;
+    font-size: 19px;
+}
+.footer-widget1-link-menu .fa-brands {
+font-size: 24px;
+}
+.footer-widget1-link-menu {
+    color: #999;
+    margin-top: 8px;
+}
+.footer-widget1 p {
+    margin-top: -80px;
+    font-size: 17px;
+    line-height: 1.7;
+}
+.footer-widget2 {
+    padding-right: 40px;
+}
+.footer-widget2 p {
+    line-height: 27px;
+    font-size: 16px;
+}
+.footer-widget3 {
+    padding-right: 21px;
+}
+.footer-widget3 a {
+    color: #666;
+    border-bottom: 1px solid #ddd;
+    line-height: 28px;
+    font-size: 16px;
+}
+.footer-widget3 ul li {
+    color: #999;
+    margin-bottom: 14px;
+    font-size: 14px;
+    line-height: 24px;
+}
+.footer-widget4 {
+    font-size: 17px;
+}
+.footer-widget4 a {
+    border-bottom: 1px solid #ddd;
+    line-height: 24px;
+}
+.footer-widget4 ul {
+    margin-bottom: 75px;
+}
+.footer-widget4 ul li {
+    margin-bottom: 14px;
+}
+input {
+    padding: 10px 80px 10px  10px;
+    border: 1px solid #e6e6e6;
+}
+/* フッター下部 */
+.site-bottom {
+    color: #999;
+    border-top: 1px solid #e6e6e6;
+    display: flex;
+    padding-top: 60px;
+}
+.site-bottom a {
+    color: #444;
+}
+/* ここ修正 */
+.site-bottom small {
+    margin-left: 280px;
+}
+.fa-brands {
+    padding-left: 12px;
+    font-size: 26px;
+}
+
+@media screen and (max-width: 783px) {
+    body {
+        margin: 0 20px;
+    }
+    .nav-links {
+        justify-content: flex-start;
+    }
+    article {
+        display: block;
+    }
+    article time {
+        font-size: 15px;
+    }
+    article h2 {
+        font-size: 19px;
+        margin-top: 15px;
+    }
+    article p {
+        font-size: 14px;
+        line-height: 25px;
+    }
+
+    .footer-widget-table {
+        display: block;
+    }
+    .footer-widget1 {
+        margin-bottom: 50px;
+    }
+    .footer-widget2 {
+        margin-bottom: 100px;
+    }
+    .footer-widget3 {
+        margin-bottom: 50px;
+    }
+    .site-bottom {
+        display: block;
+    }
+    input {
+        padding: 8px 150px 8px 5px;
+    }
+    .site-bottom {
+        display: block;
+        margin-bottom: 50px;
+    }
+    .site-icon {
+        margin-bottom: 25px;
+    }
+    .site-bottom small {
+        font-size: 13px;
+        margin-left: 0;
+        padding-bottom: 25px;
+    }
+    /* ハンバーガーメニュー */
+    /* メニューを画面上部に固定表示しています */
+.gMenu {
+    position: fixed;
+    right: 0;
+    top: 0;
+    width: 100%;
+    z-index: 99;
+  }
+  /* メニューアイコンを画面右上に固定しています */
+  .gMenu .menu-icon {
+    cursor: pointer;
+    position: absolute;
+    right: 10px;
+    top: 12px;
+    padding-top: 5px;
+    height: 12px;
+  }
+  /* メニューアイコン（三本線）の真ん中の線です */
+  .gMenu .menu-icon .navicon {
+    background: #000; /* 色は自由に変更可能です */
+    display: block;
+    height: 2px; /* 太さ */
+    width: 31px; /* 長さ */
+    position: relative;
+    transition: background .4s ease-out; /* 形が変わる時のアニメーション */
+  }
+  /* メニューアイコン（三本線）の上と下の線を疑似要素で追加 */
+  .gMenu .menu-icon .navicon::before,
+  .gMenu .menu-icon .navicon::after {
+    background: #000; /* 色は自由に変更可能です */
+    content: '';
+    display: block;
+    height: 100%;
+    position: absolute;
+    transition: all .4s ease-out; /* 形が変わる時のアニメーション */
+    width: 100%;
+  }
+  .gMenu .menu-icon .navicon::before {top: 10px;} /* 位置を上にずらしています */
+  .gMenu .menu-icon .navicon::after {top: -10px;} /* 位置を下にずらしています */
+  /* 表示されるメニューです */
+  .gMenu .menu {
+    background-color: rgba(255,255,255,0.9);
+    overflow: hidden;
+    max-height: 0; /* ★最初は高さを0にして非表示状態に */
+    transition: max-height .6s; /* 表示されるときのアニメーション */
+    text-align: center;
+  }
+  /* メニュー部分のデザインです */
+  .gMenu .menu li:first-of-type {
+    padding-top: 25px;
+    padding-top: 50px;
+  }
+  .gMenu .menu li {
+      color: #111;
+      font-size: 22px;
+padding-bottom: 50px;
+  }
+  .gMenu .menu li a {
+    display: block;
+    padding: 24px 20px;
+    text-decoration: none;
+    text-transform: uppercase;
+  }
+  .gMenu .menu li a:hover {
+    background-color: #f4f4f4;
+  }
+  /* チェックボックスは常に非表示です */
+  .gMenu .menu-btn {
+    display: none;
+  }
+  /* ▼▼▼以下はチェックボックスがONの時の状態です▼▼▼ */
+  .gMenu .menu-btn:checked ~ .menu {
+    max-height: 338px; /* ★チェックボックスがオンの時高さを338pxにして表示させます */
+    transition: max-height .6s;
+  }
+  /* メニューボタンの中央の線を非表示に */
+  .gMenu .menu-btn:checked ~ .menu-icon .navicon {background: transparent;}
+  
+  /* メニューボタンの上下の線を45度傾けて✕印を作ります */
+  .gMenu .menu-btn:checked ~ .menu-icon .navicon::before {transform: rotate(-45deg);top: 0;}
+  .gMenu .menu-btn:checked ~ .menu-icon .navicon::after {transform: rotate(45deg);top: 0;}
+  
+}
+
+
