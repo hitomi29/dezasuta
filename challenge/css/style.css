@@ -79,7 +79,10 @@ body {
     margin-top: 45px;
     font-size: 24px;
 } 
-img {
+.gMenu {
+    display: none;
+}
+.header-image {
     width: 100%;
     margin-bottom: 90px;
 }
@@ -143,7 +146,7 @@ footer {
     display: flex;
     flex-wrap: wrap;
 }
-.footer-widget1 img {
+.profilewidget-profile img {
     width: 100px;
     height: 100px;
     border-radius: 50%;
@@ -165,7 +168,7 @@ font-size: 24px;
     margin-top: 8px;
 }
 .footer-widget1 p {
-    margin-top: -80px;
+    margin-top: 20px;
     font-size: 17px;
     line-height: 1.7;
 }
@@ -229,7 +232,7 @@ input {
 
 @media screen and (max-width: 783px) {
     body {
-        margin: 0 20px;
+        margin: 45px 20px;
     }
     .nav-links {
         justify-content: flex-start;
@@ -254,6 +257,9 @@ input {
     }
     .footer-widget1 {
         margin-bottom: 50px;
+    }
+    .footer-widget1 p {
+        margin-top: 20px;
     }
     .footer-widget2 {
         margin-bottom: 100px;
@@ -281,7 +287,11 @@ input {
     }
     /* ハンバーガーメニュー */
     /* メニューを画面上部に固定表示しています */
+    .site-navigation {
+        display: none;
+    }
 .gMenu {
+    display: block;
     position: fixed;
     right: 0;
     top: 0;
