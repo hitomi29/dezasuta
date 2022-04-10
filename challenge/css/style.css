@@ -271,7 +271,8 @@ input {
         display: block;
     }
     input {
-        padding: 8px 150px 8px 5px;
+        /* padding: 8px 150px 8px 5px; */
+        width:100%;
     }
     .site-bottom {
         display: block;
