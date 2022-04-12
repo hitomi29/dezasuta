@@ -55,7 +55,6 @@ body {
     max-width: 1000px;
     margin: 0 auto;
     padding: 0 10px;
-    box-sizing: border-box;
     /* outline: 1px solid #000; */
 }
 #menu h2, #access h2, #gallery h2 ,#event h2 {
@@ -63,6 +62,9 @@ body {
     font-size: 81px;
 }
 /* ヘッダー */
+#header {
+    margin-bottom: 110px;
+}
 .header_wrap {
   display: flex;
   justify-content: space-between;
@@ -103,21 +105,11 @@ display: flex;
 /* メイン */
 .main_text {
     text-align: center;
-    margin-bottom: 92px;
-}
-/* ABOUT US */
-#about {
-    display: flex;
-    margin-bottom: 110px;
-}
-#about image img {
-    width: 500px;
-    border-bottom-right-radius: 30px;
+    margin-bottom: 93px;
 }
 .main_text1 {
     font-size: 30px;
-    line-height: 0.7;
-    margin-bottom: 58px;
+    margin-bottom: 53px;
 }
 .main_text2 {
     font-size: 82px;
@@ -131,13 +123,27 @@ display: flex;
     line-height: 1.6;
     letter-spacing: 0.1em;
 }
+/* ABOUT US */
+#about {
+    display: flex;
+    align-items: center;
+    margin-bottom: 110px;
+}
+/* 可変調べる */
+.about_us_image {
+  width: 50%;  
+}
+.about_us_image h2 img {
+    width: 100%;
+    border-bottom-right-radius: 82px;
+    margin-top:77px;
+}
 .about_us_text {
-    width:420px;
-    padding-left: 80px;
+    width:42%;
+    padding-left: 8%;
 }
 .about_us_text h2 img {
     width: 272px;
-    margin-top:77px;
 }
 .about_us_text1 {
     font-size: 44px;
@@ -148,7 +154,8 @@ display: flex;
 .about_us_text2 {
     font-size: 16px;
     line-height: 1.6;
-    margin-top: 26px;
+    text-align: justify;
+    margin-top: 32px;
 }
 /* MENU */
 #menu {
@@ -173,15 +180,16 @@ margin-bottom: 50px;
     font-weight: normal;
     color: #D30202;
     margin-top: -15px;
-    padding-left: 15px;
-    margin-bottom: 21px;
+    padding-left: 12px;
+    margin-bottom: 26px;
 }
 .menu_text {
     font-size: 17px;
-    line-height: 1.4;
+    text-align: justify;
+     line-height: 1.4;
 }
 .menu_image img {
-    border-top-right-radius: 30px;
+    border-top-right-radius: 41px;
 }
 /* GALLERY */
 #gallery {
@@ -189,13 +197,16 @@ margin-bottom: 50px;
 }
 #gallery h2 img {
     width: 245px;
-    margin-bottom: 25px;
+    margin-bottom: 30px;
 }
 #gallery ul {
 display: flex;
  }
+ .gallery_list ul li {
+    width: 20%;  
+ }
 .gallery_list ul li img {
-     width: 384px;
+     width: 100%;  
  }
 /* EVENT */
 #event h2 img {
@@ -209,14 +220,14 @@ display: flex;
 }
 .event_list ul li {
     display: flex;
-    font-size: 22px;
-    margin-bottom: 30px;
+    font-size: 23px;
+    margin-bottom: 25px;
 }
 .event_list ul li:first-child {
-    margin-top: 40px;
+    margin-top: 29px;
 }
 .event_list ul li:last-child {
-    margin-bottom: 40px;
+     margin-bottom: 29px; 
 }
 .event_list ul li time {
     margin:0 60px 0 165px;
@@ -243,7 +254,7 @@ footer {
 }
 footer p img {
     width: 226px;
-    margin-right: 80px;
+    margin-right: 70px;
 }
 .footer_area_text {
     font-size: 20px;
@@ -251,16 +262,17 @@ footer p img {
 }
 address{
     font-style:normal;
-    margin-bottom: 21px;
+    margin-bottom: 16px;
     }
 .footer_area {
     display: flex;
     margin: 0 auto;
     } 
 .open_closed {
-    margin-bottom: 21px;
+    margin-bottom: 16px;
 }
     .copyright {
+    font-size: 16px;
     margin-top: 80px;
     text-align: center;
     }
