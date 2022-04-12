@@ -47,6 +47,10 @@ img {
     vertical-align: bottom;
     border: none;
 }
+html {
+    font-size: 62.5%;
+}
+
 body {
     background-color: #E8D9BF;
     margin: 0 auto;
@@ -59,7 +63,7 @@ body {
 }
 #menu h2, #access h2, #gallery h2 ,#event h2 {
     text-align: center;
-    font-size: 81px;
+    font-size: 8.1rem;
 }
 /* ヘッダー */
 #header {
@@ -84,7 +88,7 @@ display: flex;
 }
 .pc_nav ul li a {
     color: #fff;
-    font-size: 18px;
+    font-size: 1.8rem;
     font-family: "游ゴシック体", YuGothic, "游ゴシック Medium",
     "Yu Gothic Medium", "游ゴシック", "Yu Gothic", sans-serif;
     font-weight: bold;
@@ -108,18 +112,18 @@ display: flex;
     margin-bottom: 93px;
 }
 .main_text1 {
-    font-size: 30px;
+    font-size: 3rem;
     margin-bottom: 53px;
 }
 .main_text2 {
-    font-size: 82px;
+    font-size: 8.2rem;
     font-weight: normal;
     line-height: 1.1;
     letter-spacing: 0.1em;
     margin-bottom: 45px;
 }
 .main_text3 {
-    font-size: 23px;
+    font-size: 2.3rem;
     line-height: 1.6;
     letter-spacing: 0.1em;
 }
@@ -146,13 +150,13 @@ display: flex;
     width: 272px;
 }
 .about_us_text1 {
-    font-size: 44px;
+    font-size: 4.4rem;
     font-weight: normal;
     line-height: 1.3;
     margin-top: 51px;
 }
 .about_us_text2 {
-    font-size: 16px;
+    font-size: 1.6rem;
     line-height: 1.6;
     text-align: justify;
     margin-top: 32px;
@@ -176,7 +180,7 @@ margin-bottom: 50px;
     padding-right: 0px;
 }
 .menu_list {
-    font-size: 38px;
+    font-size: 3.8rem;
     font-weight: normal;
     color: #D30202;
     margin-top: -15px;
@@ -184,7 +188,7 @@ margin-bottom: 50px;
     margin-bottom: 26px;
 }
 .menu_text {
-    font-size: 17px;
+    font-size: 1.7rem;
     text-align: justify;
      line-height: 1.4;
 }
@@ -220,7 +224,7 @@ display: flex;
 }
 .event_list ul li {
     display: flex;
-    font-size: 23px;
+    font-size: 2.3rem;
     margin-bottom: 25px;
 }
 .event_list ul li:first-child {
@@ -257,7 +261,7 @@ footer p img {
     margin-right: 70px;
 }
 .footer_area_text {
-    font-size: 20px;
+    font-size: 2rem;
     line-height: 1.9;
 }
 address{
@@ -272,7 +276,7 @@ address{
     margin-bottom: 16px;
 }
     .copyright {
-    font-size: 16px;
+    font-size: 1.6rem;
     margin-top: 80px;
     text-align: center;
     }
