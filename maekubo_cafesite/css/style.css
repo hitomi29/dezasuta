@@ -100,16 +100,15 @@ display: flex;
 .pc_nav ul li :last-child {
     padding-right: 0;
 }
-.slider {
-    margin-bottom: 110px;
-}
 .slider img {
   width: 100%;
 }
 /* メイン */
+.main_sec {
+    margin-bottom: 93px;
+}
 .main_text {
     text-align: center;
-    margin-bottom: 93px;
 }
 .main_text1 {
     font-size: 3rem;
@@ -128,23 +127,24 @@ display: flex;
     letter-spacing: 0.1em;
 }
 /* ABOUT US */
+.about_us_sec {
+    margin-bottom: 110px;
+}
 #about {
     display: flex;
     align-items: center;
-    margin-bottom: 110px;
 }
-/* 可変調べる */
 .about_us_image {
   width: 50%;  
 }
-.about_us_image h2 img {
+.about_us_image img {
     width: 100%;
     border-bottom-right-radius: 82px;
     margin-top:77px;
 }
 .about_us_text {
-    width:42%;
-    padding-left: 8%;
+    width:41%;
+    padding-left: 9%;
 }
 .about_us_text h2 img {
     width: 272px;
@@ -156,13 +156,13 @@ display: flex;
     margin-top: 51px;
 }
 .about_us_text2 {
-    font-size: 1.65rem;
+    font-size: 1.6rem;
     line-height: 1.6;
     text-align: justify;
     margin-top: 32px;
 }
 /* MENU */
-#menu {
+.menu_sec {
     margin-bottom: 96px;
 }
 #menu h2 img {
@@ -174,7 +174,7 @@ margin-bottom: 50px;
     justify-content: space-between;
 }
 #menu ul li {
-    padding-right: 50px;
+    width: 30%;
 }
 #menu ul li:last-child {
     padding-right: 0px;
@@ -196,7 +196,7 @@ margin-bottom: 50px;
     border-top-right-radius: 41px;
 }
 /* GALLERY */
-#gallery {
+.gellery_sec {
     margin-bottom: 70px;
 }
 #gallery h2 img {
@@ -213,6 +213,9 @@ display: flex;
      width: 100%;  
  }
 /* EVENT */
+.event_sec {
+    margin-bottom: 80px;
+}
 #event h2 img {
     width: 173px;
     margin-bottom: 40px;
@@ -220,15 +223,14 @@ display: flex;
 .event_list {
     background-color: #fff;
     border: 3px solid ;
-    margin-bottom: 80px;
 }
 .event_list ul li {
     display: flex;
     font-size: 2.3rem;
-    margin-bottom: 25px;
+    margin-bottom: 34px;
 }
 .event_list ul li:first-child {
-    margin-top: 29px;
+    margin-top: 34px;
 }
 .event_list ul li:last-child {
      margin-bottom: 29px; 
