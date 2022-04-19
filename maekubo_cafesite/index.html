@@ -54,8 +54,8 @@
           <p class="main_text1">Have a happy day From a cup of coffee.</p>
           <h2 class="main_text2">ハッピーに溢れる１日を<br>
             １杯のコーヒーから</h2>
-          <p class="main_text3">毎日を丁寧に大切に過ごしたい。だからこそ一杯一杯丁寧にコーヒーを入れ<br>
-            足を運んでくれるお客さんには落ち着く空間とこだわりのコーヒーを提供したい。</p>
+          <p class="main_text3">毎日を丁寧に大切に過ごしたい。<br class="sp_main_text3">だからこそ一杯一杯丁寧にコーヒーを入れ<br>
+            足を運んでくれるお客さんには落ち着く空間と<br class="sp_main_text3">こだわりのコーヒーを提供したい。</p>
         </div>
       </div>
     </section>
@@ -225,6 +225,13 @@
         $('.sp_nav').fadeToggle();
         $('.sp_btn').toggleClass('open');
       });
+    });
+    // #page-topをクリックした際の設定
+    $('.to_top_button').click(function () {
+      $('body,html').animate({
+        scrollTop: 0//ページトップまでスクロール
+      }, 500);//ページトップスクロールの速さ。数字が大きいほど遅くなる
+      return false;//リンク自体の無効化
     });
   </script>
 </body>
