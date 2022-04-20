@@ -63,7 +63,6 @@ body {
 }
 #menu h2, #access h2, #gallery h2 ,#event h2 {
     text-align: center;
-    font-size: 8.1rem;
 }
 /* ヘッダー */
 #header {
@@ -118,8 +117,7 @@ display: flex;
     margin-bottom: 53px;
 }
 .main_text2 {
-    font-size: 4.27vw;
-    /* font-size: 8.2rem; */
+    font-size: 8.2rem;
     font-weight: normal;
     line-height: 1.1;
     letter-spacing: 0.1em;
@@ -237,16 +235,16 @@ display: flex;
 .event_list ul li {
     display: flex;
     font-size: 2.3rem;
-    margin-bottom: 34px;
+    margin-bottom: 25px;
 }
 .event_list ul li:first-child {
-    margin-top: 34px;
+    margin-top: 39px;
 }
 .event_list ul li:last-child {
-     margin-bottom: 29px; 
+     margin-bottom: 34px; 
 }
 .event_list ul li time {
-    margin:0 3.2% 0 11.6%;
+     margin:0 6.5% 0 16.5%;
 }
 .event_list ul li p {
     text-decoration: underline;
@@ -301,8 +299,7 @@ address{
 /* タブレットレスポンシブ */
 @media screen and (max-width: 1100px) {
  .main_text2 {
-     /* font-size: 7rem; */
-     font-size: 7vw;
+font-size: 7rem;
  }
  .main_text3 {
      font-size: 2.1rem;
@@ -416,13 +413,13 @@ margin: 0 0 25px 0;
     margin-bottom: 32px;
     }
 .main_text2 {
-    font-size: 3.8rem;
+    font-size:10.13vw;
     line-height: 1.1;
     letter-spacing: 0.02em;
     margin-bottom: 26px;
     }
     .main_text3 {
-        font-size: 1.6rem;
+        font-size: 4.26vw;
     }
     .sp_main_text3 {
         display: block;
