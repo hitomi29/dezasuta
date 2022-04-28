@@ -59,7 +59,7 @@ body {
     max-width: 1000px;
     margin: 0 auto;
     padding: 0 10px;
-    /* outline: 1px solid #000; */
+    outline: 1px solid #000;
 } 
 #menu h2, #access h2, #gallery h2 ,#event h2 {
     text-align: center;
