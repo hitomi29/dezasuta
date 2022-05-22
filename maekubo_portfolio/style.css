@@ -1,0 +1,227 @@
+@charset "UTF-8";
+/* リセット */
+html,
+body,
+header,
+footer,
+main,
+section,
+h1,
+h2,
+h3,
+ul,
+li,
+p,
+dl,
+dt,
+dd {
+  margin: 0;
+  padding: 0;
+  line-height: 1;
+  color: #28211C;
+  font-family: "游ゴシック体", YuGothic, "游ゴシック Medium", "Yu Gothic Medium", "游ゴシック", "Yu Gothic", sans-serif;
+  -webkit-font-feature-settings: "palt";
+          font-feature-settings: "palt";
+}
+
+a {
+  /*下線を消す*/
+  text-decoration: none;
+  /*色を消す*/
+  color: inherit;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+a:hover {
+  opacity: 0.5;
+}
+
+ul {
+  /*左の「・」を消す*/
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+  vertical-align: bottom;
+  border: none;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  margin: 0 auto;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 10px;
+  height: 650px;
+  outline: 1px solid #000;
+}
+
+#about h2, #service h2, #work h2 {
+  text-align: center;
+}
+
+#about h2, #service h2, #work h2, #contact h2 {
+  padding-top: 1rem;
+}
+
+#header .header_wrap {
+  height: 650px;
+  outline: 1px solid #000;
+  position: relative;
+}
+
+#header .header_wrap ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-top: 3rem;
+}
+
+#header .header_wrap ul li {
+  margin: 0 8rem 0 8rem;
+}
+
+#header .header_wrap ul li a {
+  font-size: 1.8rem;
+  display: block;
+}
+
+#header .header_wrap ul .logo {
+  width: 8rem;
+}
+
+#header .header_wrap .main_visual_text .main_text {
+  color: #AB8438;
+  font-size: 5rem;
+  font-family: "A1 Mincho", "游明朝", YuMincho, "Hiragino Mincho ProN W3", "ヒラギノ明朝 ProN W3", "Hiragino Mincho ProN", "HG明朝E", "ＭＳ Ｐ明朝", "ＭＳ 明朝", serif;
+  line-height: 1.6;
+  letter-spacing: 0.05em;
+  padding: 12rem 0 20.3rem 25rem;
+}
+
+#header .header_wrap .main_visual1 {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: -1;
+}
+
+#header .header_wrap .main_visual1 img {
+  width: 400px;
+}
+
+#header .header_wrap .main_visual2 {
+  position: absolute;
+  top: 110px;
+  left: 100px;
+  z-index: -1;
+}
+
+#about .about_sec {
+  background: url(images/About_back_pc.svg), url(images/About_back2_pc.svg);
+}
+
+#service ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#service ul li {
+  width: 30%;
+  text-align: center;
+}
+
+#service ul li .service_title {
+  font-size: 2.8rem;
+  margin: 6rem 0  6rem 0;
+}
+
+#service ul li .service_text {
+  font-size: 1.6rem;
+  line-height: 1.6;
+  letter-spacing: 0.05em;
+  text-align: justify;
+}
+
+#work {
+  height: 650px;
+  outline: 1px solid #000;
+}
+
+#contact .contact_wrap {
+  background: url(images/Contact_back_pc.png) no-repeat bottom/cover;
+  z-index: -1;
+}
+
+#contact .contact_wrap .contact_box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+#contact .contact_wrap .contact_box .contact_left .contact_text {
+  font-size: 1.6rem;
+  line-height: 1.6;
+  letter-spacing: 0.05em;
+  margin: 4.5rem 0 8rem 0;
+}
+
+#contact .contact_wrap .contact_box .contact_right {
+  margin-top: 10rem;
+}
+
+#contact .contact_wrap .contact_box .contact_right .c_form {
+  width: 60rem;
+}
+
+#contact .contact_wrap .contact_box .contact_right .c_form .c_form_box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+#contact .contact_wrap .contact_box .contact_right .c_form .c_form_text {
+  font-size: 1.6rem;
+  margin-top: 2rem;
+}
+
+#contact .contact_wrap .contact_box .contact_right .c_form input[type="text"],
+#contact .contact_wrap .contact_box .contact_right .c_form textarea {
+  border: 1px solid #D8D8D8;
+  background-color: #fff;
+  width: 40rem;
+  height: 3rem;
+  margin-top: 2rem;
+}
+
+#contact .contact_wrap .contact_box .contact_right .c_form textarea {
+  height: 15rem;
+}
+/*# sourceMappingURL=style.css.map */
