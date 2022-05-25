@@ -51,8 +51,10 @@ html {
 }
 
 body {
+
     margin: 0 auto;
 }
+
 .container {
     max-width: 1200px;
     margin: 0 auto;
@@ -63,98 +65,170 @@ body {
 }
 
 #about h2, #service h2, #work h2 {
-  text-align: center;
+    text-align: center;
 }
 
 #about h2, #service h2, #work h2, #contact h2 {
-  padding-top: 1rem;
+    padding-top: 1rem;
 }
 
 // 変数
-$fs18: 1.8rem;
-$fs16: 1.6rem;
+    $fs18: 1.8rem;
+    $fs16: 1.6rem;
 
 // ヘッダー
 #header {
-.header_wrap {
+    .header_wrap {
 // 後で消す
-  height: 650px;
-  outline: 1px solid #000;
+    height: 650px;
+    outline: 1px solid #000;
 
-  position: relative;
-  ul {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding-top: 3rem; 
+    position: relative;
+      ul {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding-top: 3rem; 
 
-    li {
-      margin: 0 8rem 0 8rem;
+          li {
+              margin: 0 8rem 0 8rem;
 
-      a {
-        font-size: $fs18;
-        display: block;
+                a {
+                  font-size: $fs18;
+                  display: block;
+                }
+          }
+
+      .logo {
+        width: 8rem;
       }
-  }
+      }
+      .main_visual_text {
 
-    .logo {
-      width: 8rem;
-  }
-}
-  .main_visual_text {
+          .main_text {
+              color: #AB8438;
+              font-size: 5rem;
+              font-family: "A1 Mincho", "游明朝", YuMincho, "Hiragino Mincho ProN W3",
+                "ヒラギノ明朝 ProN W3", "Hiragino Mincho ProN", "HG明朝E", "ＭＳ Ｐ明朝",
+                "ＭＳ 明朝", serif;
+                line-height: 1.6;
+                letter-spacing: 0.05em;
+                padding:12rem 0 0 25rem;
+            }
+      }
 
-    .main_text {
-      color: #AB8438;
-      font-size: 5rem;
-      font-family: "A1 Mincho", "游明朝", YuMincho, "Hiragino Mincho ProN W3",
-        "ヒラギノ明朝 ProN W3", "Hiragino Mincho ProN", "HG明朝E", "ＭＳ Ｐ明朝",
-        "ＭＳ 明朝", serif;
-        line-height: 1.6;
-        letter-spacing: 0.05em;
-        padding:12rem 0 20.3rem 25rem;
+      .main_visual1 {
+        position: absolute;
+        top: 0;
+        right: 0;
+        z-index: -1;
+
+          img {
+            width: 400px;
+          }
+      }
+
+      .main_visual2 {
+        position: absolute;
+        top: 11rem;
+        left: 5.21%;
+        z-index: -1;
+      }
+
+      .scrolldown1{
+      position:absolute;
+      left:50%;
+      bottom:10px;
+      height:50px;
+    }
+
+    .scrolldown1 span{
+      position: absolute;
+      left:-20px;
+      top: -10px;
+      color: #000;
+      font-size: 1rem;
+      letter-spacing: 0.05em;
+    }
+
+    .scrolldown1::after{
+      content: "";
+      position: absolute;
+      top: 0;
+      width: 1px;
+      height: 30px;
+      background: #000;
+      animation: pathmove 1.4s ease-in-out infinite;
+      opacity:0;
+    }
+
+    @keyframes pathmove{
+      0%{
+        height:0;
+        top:0;
+        opacity: 0;
+      }
+      30%{
+        height:30px;
+        opacity: 1;
+      }
+      100%{
+        height:0;
+        top:50px;
+        opacity: 0;
+      }
     }
   }
-
-  .main_visual1 {
-    position: absolute;
-    top: 0;
-    right: 0;
-    z-index: -1;
-
-    img {
-      width: 400px;
-    }
-  }
-
-  .main_visual2 {
-    position: absolute;
-    top: 110px;
-    left: 100px;
-    z-index: -1;
-  }
-}
 }
 
   // About
   #about {
     .about_sec {
-      background: url(images/About_back_pc.svg),
-      url(images/About_back2_pc.svg)
-    }
-  }
+      background: url(images/About_back_pc.svg)no-repeat left/1200px,
+      url(images/About_back2_pc.svg) no-repeat center/cover;
+      .container {
 
+        .about_box {
+          display: flex;
+          justify-content: center;
+          margin-top: -6rem;
+
+        .about_right {
+          p {
+            font-size: $fs16;
+            line-height: 2.1;
+            letter-spacing: 0.05em;
+            background-color: #fff;
+            margin-top: 7rem;
+            padding: 3rem 5.5rem 6rem 5rem;
+            box-shadow:39px 0px 39px -30px rgba(0, 0, 0, 0.2) inset;
+          }
+  
+          .text_bold {
+            font-weight: bold;
+          }
+        }
+      }
+      }
+    }
+    }
   // Service
   #service {
 
     ul {
         display: flex;
         justify-content: space-between;
-        align-items: center;
 
         li {
           width: 30%;
           text-align: center;
           
+          .service_icon {
+            img {
+              // display: inline-block;
+              height: 10rem;
+          }
+        }
           .service_title {
             font-size: 2.8rem;
             margin:6rem 0  6rem 0;
@@ -176,6 +250,18 @@ $fs16: 1.6rem;
     // 後で消す
     height: 650px;
     outline: 1px solid #000;
+
+    .work_list {
+      ul {
+        display: flex;
+        li {
+          width: 20%;
+          img {
+            width: 100%;
+          }
+        }
+      }
+    }
 }
 
 // フッター
@@ -208,7 +294,7 @@ $fs16: 1.6rem;
                 justify-content: space-between;
               }
 
-            .c_form_text {
+            label {
                 font-size: $fs16;
                 margin-top: 2rem;
               }
@@ -223,7 +309,7 @@ $fs16: 1.6rem;
             }
             textarea {
               height:  15rem;
-          }
+          } 
           }
       }
       }

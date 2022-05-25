@@ -6,9 +6,14 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet">
   <title>etoile design</title>
+  <link rel="stylesheet" type="text/css" href="css/9-1-1.css">
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css">
   <link rel="stylesheet" href="style.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
   <meta name="description" content="etoile designのポートフォリオサイト">
 </head>
 
@@ -18,24 +23,25 @@
     <div class="header_wrap">
       <nav class="pc_nav">
         <ul>
-          <li><a href="#about">ABOUT</a></li>
+          <li><a href="#about.html">ABOUT</a></li>
           <li><a href="#service">SERVICE</a></li>
           <li>
             <h1 class="logo"><img src="images/logo1.svg" alt="etoile design ロゴ"></h1>
           </li>
-          <li><a href="#work">WORK</a></li>
+          <li><a href="#work.html">WORK</a></li>
           <li><a href="#contact">CONTACT</a></li>
         </ul>
       </nav>
       <div class="main_visual_text">
         <p class="main_text">キラリと輝く<br>あなたらしいデザイン<br>一緒に想いを“形”にしてみませんか？</p>
       </div>
+      <div class="scrolldown1"><span>SCROLL</span></div>
       <div>
         <p class="main_visual1">
-          <img src="images/main_visual1.jpg" alt="">
+          <img src="images/main_visual1.jpg" alt="メイン画像">
         </p>
         <p class="main_visual2">
-          <img src="images/main_visual2.png" alt="">
+          <img src="images/main_visual2.png" alt="メイン画像">
         </p>
       </div>
     </div>
@@ -46,9 +52,25 @@
     <div id="about">
       <section class="about_sec">
         <div class="container">
-          <h2>
+          <h2 class="about_h2">
             <img src="images/About_pc.svg" alt="about">
           </h2>
+          <div class="about_box">
+            <div class="about_left">
+              <p class="about_pic">
+                <img src="images/550x450.png" alt="プロフィール画像">
+              </p>
+            </div>
+            <div class="about_right">
+              <p>当サイトにご訪問いただきましてありがとうございます。<br>
+                etoile designではWeb制作を通してお客様1人1人に合わせて、<br>
+                <span class="text_bold">一緒に想いを”形”</span>にし、<span class="text_bold">”未来に繋げる”</span>お手伝いをさせていただきます。<br>
+                どんな人が作っているの？<br>
+                具体的にどういうことができるの？<br>
+                詳しくはこちらをご覧ください。
+              </p>
+            </div>
+          </div>
         </div>
       </section>
     </div>
@@ -62,7 +84,9 @@
           <ul>
             <li>
               <div class="service_box1">
-                <img src="images/Website_pc.svg" alt="">
+                <p class="service_icon">
+                  <img src="images/Website_pc.svg" alt="">
+                </p>
                 <h3 class="service_title">Web site design</h3>
                 <p class="service_text">
                   お客様の要望をしっかりとヒアリングし、会社やブランドイメージに合わせて、Webサイトに訪問したユーザーにサービス内容をわかりやすく、お客様の想いを届けるサイトデザインを制作いたします。
@@ -71,7 +95,9 @@
             </li>
             <li>
               <div class="service_box2">
-                <img src="images/Cording_pc.svg" alt="">
+                <p class="service_icon">
+                  <img src="images/Cording_pc.svg" alt="">
+                </p>
                 <h3 class="service_title">Coding</h3>
                 <p class="service_text">
                   HTML CSS
@@ -81,7 +107,9 @@
             </li>
             <li>
               <div class="service_box3">
-                <img src="images/Grafic_pc.svg" alt="">
+                <p class="service_icon">
+                  <img src="images/Grafic_pc.svg" alt="">
+                </p>
                 <h3 class="service_title">Graphic design</h3>
                 <p class="service_text">
                   ロゴ、名刺、チラシetc...お客様のメッセージやコンセプトからしっかりと相手に伝わるデザインを考えて作成いたします。その他のメニューも相談可能ですので、お気軽にお問合せください。
@@ -99,18 +127,12 @@
         <h2><img src="images/Work_pc.svg" alt=""></h2>
         <div class="work_list">
           <ul>
-            <!-- <li><img src="images/slider1_pc.jpg" alt=""></li>
+            <li><img src="images/slider1_pc.jpg" alt=""></li>
             <li><img src="images/slider2_pc.jpg" alt=""></li>
             <li><img src="images/slider3_pc.jpg" alt=""></li>
             <li><img src="images/slider4_pc.jpg" alt=""></li>
             <li><img src="images/slider5_pc.jpg" alt=""></li>
-            <li><img src="images/slider6_pc.jpg" alt=""></li> -->
-            <!-- <li><a href="images/slider1_pc.jpg" data-lightbox="img-group" data-title="制作物" data-alt=""></li>
-            <li><a href="images/slider2_pc.jpg" data-lightbox="img-group" data-title="制作物" data-alt=""></li>
-            <li><a href="images/slider3_pc.jpg" data-lightbox="img-group" data-title="制作物" data-alt=""></li>
-            <li><a href="images/slider4_pc.jpg" data-lightbox="img-group" data-title="制作物" data-alt=""></li>
-            <li><a href="images/slider5_pc.jpg" data-lightbox="img-group" data-title="制作物" data-alt=""></li>
-            <li><a href="images/slider6_pc.jpg" data-lightbox="img-group" data-title="制作物" data-alt=""></li> -->
+            <li><img src="images/slider6_pc.jpg" alt=""></li>
           </ul>
         </div>
       </section>
@@ -131,36 +153,57 @@
                 ご依頼やご相談等お気軽にお問い合わせください。<br>
                 内容を確認後、48時間以内にお返事いたします。
               </p>
-              <p><input type="submit" value="送信"></p>
             </div>
             <div class="contact_right">
               <form class="c_form"
-                action="https://docs.google.com/forms/u/1/d/e/1FAIpQLScmM3NzgEmXyxSaK6o2eNmTJSjp9cgNeRzzoQ5bp7bCg1CpzA/formResponse">
-                <label for="your-name">
-                  <div class="c_form_box">
-                    <p class="c_form_text">お名前</p>
-                    <input type="text" name="entry.533880506">
-                  </div>
-                </label>
-                <label for="your-email">
-                  <div class="c_form_box">
-                    <p class="c_form_text">メールアドレス</p>
-                    <input type="text" name="entry.2071272141">
-                  </div>
-                </label>
-                <label for="your-message">
-                  <div class="c_form_box">
-                    <p class="c_form_text">お問合せ内容</p>
-                    <textarea name="entry.882982955"></textarea>
-                  </div>
-                </label>
+                action="https://docs.google.com/forms/u/1/d/e/1FAIpQLScmM3NzgEmXyxSaK6o2eNmTJSjp9cgNeRzzoQ5bp7bCg1CpzA/formResponse"
+                method="post" target="hidden_iframe" onsubmit="submitted=true;">
+                <div class="c_form_box">
+                  <label for="name">お名前</label>
+                  <input type="text" name="entry.533880506" id="name" placeholder="" required>
+                </div>
+                <div class="c_form_box">
+                  <label for="e-mail">メールアドレス</label>
+                  <input type="text" name="entry.2071272141" id="e-mail" placeholder="" required>
+                </div>
+                <div class="c_form_box">
+                  <label for="contact_us">お問合せ</label>
+                  <textarea name="entry.882982955" id="contact_us" placeholder="" required></textarea>
+                </div>
+                <div class="submit-btn">
+                  <input type="submit" value="送信" />
+                </div>
               </form>
+              <!-- サンクスページへ -->
+              <script type="text/javascript">
+                var submitted = false;
+              </script>
+              <iframe name="hidden_iframe" id="hidden_iframe" style="display: none"
+                onload="if(submitted)  {window.location='thanks.html';}"></iframe>
             </div>
           </div>
         </div>
       </div>
     </div>
   </footer>
+
+  <script>
+    // GALLERYスライダー
+    $('.work_list ul').slick({
+      slidesToShow: 5,
+      slidesToScroll: 1,
+      autoplay: true,
+      autoplaySpeed: 2000,
+      responsive: [
+        {
+          breakpoint: 787, //786px以下のサイズに適用
+          settings: {
+            slidesToShow: 1,
+          },
+        },
+      ],
+    });
+  </script>
 </body>
 
 </html>

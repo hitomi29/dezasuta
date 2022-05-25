@@ -110,7 +110,7 @@ body {
   font-family: "A1 Mincho", "游明朝", YuMincho, "Hiragino Mincho ProN W3", "ヒラギノ明朝 ProN W3", "Hiragino Mincho ProN", "HG明朝E", "ＭＳ Ｐ明朝", "ＭＳ 明朝", serif;
   line-height: 1.6;
   letter-spacing: 0.05em;
-  padding: 12rem 0 20.3rem 25rem;
+  padding: 12rem 0 0 25rem;
 }
 
 #header .header_wrap .main_visual1 {
@@ -126,13 +126,100 @@ body {
 
 #header .header_wrap .main_visual2 {
   position: absolute;
-  top: 110px;
-  left: 100px;
+  top: 11rem;
+  left: 5.21%;
   z-index: -1;
 }
 
+#header .header_wrap .scrolldown1 {
+  position: absolute;
+  left: 50%;
+  bottom: 10px;
+  height: 50px;
+}
+
+#header .header_wrap .scrolldown1 span {
+  position: absolute;
+  left: -20px;
+  top: -10px;
+  color: #000;
+  font-size: 1rem;
+  letter-spacing: 0.05em;
+}
+
+#header .header_wrap .scrolldown1::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  width: 1px;
+  height: 30px;
+  background: #000;
+  -webkit-animation: pathmove 1.4s ease-in-out infinite;
+          animation: pathmove 1.4s ease-in-out infinite;
+  opacity: 0;
+}
+
+@-webkit-keyframes pathmove {
+  0% {
+    height: 0;
+    top: 0;
+    opacity: 0;
+  }
+  30% {
+    height: 30px;
+    opacity: 1;
+  }
+  100% {
+    height: 0;
+    top: 50px;
+    opacity: 0;
+  }
+}
+
+@keyframes pathmove {
+  0% {
+    height: 0;
+    top: 0;
+    opacity: 0;
+  }
+  30% {
+    height: 30px;
+    opacity: 1;
+  }
+  100% {
+    height: 0;
+    top: 50px;
+    opacity: 0;
+  }
+}
+
 #about .about_sec {
-  background: url(images/About_back_pc.svg), url(images/About_back2_pc.svg);
+  background: url(images/About_back_pc.svg) no-repeat left/1200px, url(images/About_back2_pc.svg) no-repeat center/cover;
+}
+
+#about .about_sec .container .about_box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-top: -6rem;
+}
+
+#about .about_sec .container .about_box .about_right p {
+  font-size: 1.6rem;
+  line-height: 2.1;
+  letter-spacing: 0.05em;
+  background-color: #fff;
+  margin-top: 7rem;
+  padding: 3rem 5.5rem 6rem 5rem;
+  -webkit-box-shadow: 39px 0px 39px -30px rgba(0, 0, 0, 0.2) inset;
+          box-shadow: 39px 0px 39px -30px rgba(0, 0, 0, 0.2) inset;
+}
+
+#about .about_sec .container .about_box .about_right .text_bold {
+  font-weight: bold;
 }
 
 #service ul {
@@ -142,14 +229,15 @@ body {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
 }
 
 #service ul li {
   width: 30%;
   text-align: center;
+}
+
+#service ul li .service_icon img {
+  height: 10rem;
 }
 
 #service ul li .service_title {
@@ -167,6 +255,20 @@ body {
 #work {
   height: 650px;
   outline: 1px solid #000;
+}
+
+#work .work_list ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+#work .work_list ul li {
+  width: 20%;
+}
+
+#work .work_list ul li img {
+  width: 100%;
 }
 
 #contact .contact_wrap {
@@ -207,7 +309,7 @@ body {
           justify-content: space-between;
 }
 
-#contact .contact_wrap .contact_box .contact_right .c_form .c_form_text {
+#contact .contact_wrap .contact_box .contact_right .c_form label {
   font-size: 1.6rem;
   margin-top: 2rem;
 }
