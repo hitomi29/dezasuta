@@ -184,9 +184,15 @@ body {
   // About
   #about {
     .about_sec {
-      background: url(images/About_back_pc.svg)no-repeat left/1200px,
-      url(images/About_back2_pc.svg) no-repeat center/cover;
+      background:url(images/About_back2_pc.svg) no-repeat center/cover;
+    
       .container {
+        position: relative;
+        .about_h2 {
+          img {
+            position: relative;
+          }
+        }
 
         .about_box {
           display: flex;
