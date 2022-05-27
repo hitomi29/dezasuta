@@ -135,14 +135,14 @@ body {
         z-index: -1;
       }
 
-      .scrolldown1{
+      .scrolldown{
       position:absolute;
       left:50%;
       bottom:10px;
       height:50px;
     }
 
-    .scrolldown1 span{
+    .scrolldown span{
       position: absolute;
       left:-20px;
       top: -10px;
@@ -151,7 +151,7 @@ body {
       letter-spacing: 0.05em;
     }
 
-    .scrolldown1::after{
+    .scrolldown::after{
       content: "";
       position: absolute;
       top: 0;
@@ -218,6 +218,7 @@ body {
     ul {
         display: flex;
         justify-content: space-between;
+        margin-top: 6rem;
 
         li {
           width: 30%;
@@ -254,6 +255,7 @@ body {
     .work_list {
       ul {
         display: flex;
+        margin-top: 5rem;
         li {
           width: 20%;
           img {
@@ -312,6 +314,23 @@ body {
           } 
           }
       }
+      
+      }
+      .fs_icons {
+        display: flex;
+       justify-content: center;
+       margin-top: 10rem;
+        .instagram {
+          font-size: 4.8rem;
+          color:#1B333F;
+          margin-right: 3.5rem;
+        }
+        .twitter {
+          font-size: 4.8rem;
+          color:#1B333F;
+          margin-left: 3.5rem;
+        }
+
       }
     }
     }

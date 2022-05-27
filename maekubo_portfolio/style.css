@@ -131,14 +131,14 @@ body {
   z-index: -1;
 }
 
-#header .header_wrap .scrolldown1 {
+#header .header_wrap .scrolldown {
   position: absolute;
   left: 50%;
   bottom: 10px;
   height: 50px;
 }
 
-#header .header_wrap .scrolldown1 span {
+#header .header_wrap .scrolldown span {
   position: absolute;
   left: -20px;
   top: -10px;
@@ -147,7 +147,7 @@ body {
   letter-spacing: 0.05em;
 }
 
-#header .header_wrap .scrolldown1::after {
+#header .header_wrap .scrolldown::after {
   content: "";
   position: absolute;
   top: 0;
@@ -229,6 +229,7 @@ body {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  margin-top: 6rem;
 }
 
 #service ul li {
@@ -261,6 +262,7 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  margin-top: 5rem;
 }
 
 #work .work_list ul li {
@@ -325,5 +327,27 @@ body {
 
 #contact .contact_wrap .contact_box .contact_right .c_form textarea {
   height: 15rem;
+}
+
+#contact .contact_wrap .fs_icons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-top: 10rem;
+}
+
+#contact .contact_wrap .fs_icons .instagram {
+  font-size: 4.8rem;
+  color: #1B333F;
+  margin-right: 3.5rem;
+}
+
+#contact .contact_wrap .fs_icons .twitter {
+  font-size: 4.8rem;
+  color: #1B333F;
+  margin-left: 3.5rem;
 }
 /*# sourceMappingURL=style.css.map */

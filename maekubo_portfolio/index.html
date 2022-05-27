@@ -7,6 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css">
   <title>etoile design</title>
   <link rel="stylesheet" type="text/css" href="css/9-1-1.css">
   <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
@@ -23,19 +24,19 @@
     <div class="header_wrap">
       <nav class="pc_nav">
         <ul>
-          <li><a href="#about.html">ABOUT</a></li>
+          <li><a href="about.html">ABOUT</a></li>
           <li><a href="#service">SERVICE</a></li>
           <li>
             <h1 class="logo"><img src="images/logo1.svg" alt="etoile design ロゴ"></h1>
           </li>
-          <li><a href="#work.html">WORK</a></li>
+          <li><a href="work.html">WORK</a></li>
           <li><a href="#contact">CONTACT</a></li>
         </ul>
       </nav>
       <div class="main_visual_text">
         <p class="main_text">キラリと輝く<br>あなたらしいデザイン<br>一緒に想いを“形”にしてみませんか？</p>
       </div>
-      <div class="scrolldown1"><span>SCROLL</span></div>
+      <div class="scrolldown"><span>SCROLL</span></div>
       <div>
         <p class="main_visual1">
           <img src="images/main_visual1.jpg" alt="メイン画像">
@@ -182,6 +183,10 @@
                 onload="if(submitted)  {window.location='thanks.html';}"></iframe>
             </div>
           </div>
+          <div class="fs_icons">
+            <div class="instagram"><i class="fab fa-instagram"></i></div>
+            <div class="twitter"><i class="fab fa-twitter"></i></div>
+          </div>
         </div>
       </div>
     </div>
@@ -192,6 +197,7 @@
     $('.work_list ul').slick({
       slidesToShow: 5,
       slidesToScroll: 1,
+      arrows: false,
       autoplay: true,
       autoplaySpeed: 2000,
       responsive: [
