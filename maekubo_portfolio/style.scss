@@ -55,13 +55,19 @@ body {
     margin: 0 auto;
 }
 
+section {
+  // 後で消す
+  // height: 650px;
+  // outline: 1px solid #000;
+}
+
 .container {
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 10px;
     // 後で消す
-    height: 650px;
-    outline: 1px solid #000;
+    // height: 650px;
+    // outline: 1px solid #000;
 }
 
 #about h2, #service h2, #work h2 {
@@ -76,14 +82,13 @@ body {
     $fs18: 1.8rem;
     $fs16: 1.6rem;
 
+// トップページ
 // ヘッダー
 #header {
     .header_wrap {
 // 後で消す
-    height: 650px;
-    outline: 1px solid #000;
-
-    position: relative;
+      //  outline: 1px solid #000;
+       position: relative;
       ul {
         display: flex;
         justify-content: center;
@@ -113,7 +118,7 @@ body {
                 "ＭＳ 明朝", serif;
                 line-height: 1.6;
                 letter-spacing: 0.05em;
-                padding:12rem 0 0 25rem;
+                padding:12rem 0 16rem 25rem;
             }
       }
 
@@ -121,7 +126,7 @@ body {
         position: absolute;
         top: 0;
         right: 0;
-        z-index: -1;
+        // z-index: -1;
 
           img {
             width: 400px;
@@ -132,7 +137,7 @@ body {
         position: absolute;
         top: 11rem;
         left: 5.21%;
-        z-index: -1;
+        // z-index: -1;
       }
 
       .scrolldown{
@@ -185,9 +190,16 @@ body {
   #about {
     .about_sec {
       background:url(images/About_back2_pc.svg) no-repeat center/cover;
+      height: 65rem;
     
       .container {
         position: relative;
+        margin-bottom: 9.6rem;
+        .about_back {
+          position: absolute;
+          top: -10rem;
+          z-index:  -1;
+        }
         .about_h2 {
           img {
             position: relative;
@@ -200,6 +212,7 @@ body {
           margin-top: -6rem;
 
         .about_right {
+          position: relative;
           p {
             font-size: $fs16;
             line-height: 2.1;
@@ -213,13 +226,23 @@ body {
           .text_bold {
             font-weight: bold;
           }
+          .readmore_btn1 {
+            position: absolute;
+            right: 5rem;
+            bottom: 6rem;
+            a:hover {
+              opacity: 0.8;
+            }
+            }
+          }
         }
       }
       }
     }
-    }
   // Service
   #service {
+  .service_sec {
+    margin-bottom: 10.8rem;
 
     ul {
         display: flex;
@@ -250,18 +273,21 @@ body {
         }
     }
   }
+}
 
   // Work
 
   #work {
     // 後で消す
-    height: 650px;
-    outline: 1px solid #000;
+    // height: 650px;
+    // outline: 1px solid #000;
+  .work_sec {
+    margin-bottom: 12.2rem;
 
     .work_list {
       ul {
         display: flex;
-        margin-top: 5rem;
+        margin-top: 2rem;
         li {
           width: 20%;
           img {
@@ -270,12 +296,22 @@ body {
         }
       }
     }
+   .readmore_btn2 {
+     margin-top: 2rem;
+     text-align: center;
+
+     a:hover {
+      opacity: 0.8;
+    }
+   }
+  }
 }
 
 // フッター
 #contact {
   .contact_wrap {
    background: url(images/Contact_back_pc.png) no-repeat bottom /cover;
+   height: 65rem;
    z-index: -1;
   
   .contact_box {
@@ -283,7 +319,6 @@ body {
     justify-content: space-between;
 
     .contact_left {
-
         .contact_text {
           font-size: $fs16;
           line-height: 1.6;
@@ -324,19 +359,156 @@ body {
       }
       .fs_icons {
         display: flex;
-       justify-content: center;
-       margin-top: 10rem;
-        .instagram {
-          font-size: 4.8rem;
-          color:#1B333F;
-          margin-right: 3.5rem;
-        }
-        .twitter {
-          font-size: 4.8rem;
-          color:#1B333F;
-          margin-left: 3.5rem;
-        }
+        justify-content: center;
+        margin-top: 10rem;
+        font-size: 3.6rem;
+        color:#1B333F;
+            .instagram {
+              margin-right: 2rem;
+            }
+            .twitter {
+              margin-left: 2rem;
+            }
 
       }
     }
     }
+
+// 下層Aboutページ
+.about_page_sec {
+
+background: url(images/About2_back_pc.jpg)no-repeat center /cover;
+  .container {
+    margin-bottom: 13rem;
+    .profile_left {
+      p {
+      img {
+        box-shadow: 50px 43px 93px -17px #999999;
+        border-radius: 0px;
+      }
+    }
+  }
+
+.about_page_h2 {
+text-align: center;
+margin: 8rem 0 7.5rem 0;
+}
+
+.about_page_text {
+  text-align: center;
+  font-size: 3.6rem;
+  font-family: "A1 Mincho", "游明朝", YuMincho, "Hiragino Mincho ProN W3",
+                "ヒラギノ明朝 ProN W3", "Hiragino Mincho ProN", "HG明朝E", "ＭＳ Ｐ明朝",
+                "ＭＳ 明朝", serif;
+  line-height: 2;              
+  letter-spacing: 0.1em;
+  margin-bottom: 12.7rem;
+}
+
+.profile_box {
+  display: flex;
+  justify-content: space-between;
+
+.profile_right {
+  width: 51.25%;
+
+  .profile_text1 {
+    letter-spacing: 0.05em;
+  }
+
+  .profile_name {
+    font-size: 3.6rem;
+    margin-bottom: 3.5rem;
+  }
+
+  .profile_title {
+    font-size: 2.4rem;
+    margin-bottom: 2.5rem;
+  }
+
+  .profile_text {
+    font-size: $fs16;
+    line-height: 1.5;
+    text-align: justify;
+    margin-bottom: 3.5rem;
+  }
+  
+  .profile_box2 {
+    display: flex;
+    border-top: 1px solid #28211C;
+
+    .profile_title1 {
+      padding-top: 2rem;
+    }
+
+  }
+
+  .profile_box3 {
+    padding-right: 2rem;
+    border-right: 1px solid #28211C;
+    ul {
+      li {
+        p {
+          margin-bottom: 1.6rem;
+        }
+      }
+    }
+  }
+
+  .profile_box4 {
+    padding-left: 2rem;
+
+    ul {
+      li {
+        p {
+          font-size: $fs16;
+          margin-bottom: 1.6rem;
+        }
+      }
+    }
+  }
+}
+  }
+}
+.c_form2 {
+  text-align: center;
+
+  .c_form2_text {
+  font-size: 2.4rem;
+  }
+  .contact_btn {
+    margin: 5rem 0 10.1rem 0;
+  }
+}
+}
+// 下層Workページ
+.work_page_sec {
+
+  .container {
+    .work_page_h2 {
+      text-align: center;
+      margin: 8rem 0 7.5rem 0;
+    }
+
+    .work_title {
+      font-size: 3.6rem;
+      margin: 1.5rem 0 2.5rem 0;
+    }
+
+    .work_text {
+      font-size: $fs16;
+      line-height: 1.6;
+    }
+
+  }
+  .c_form2 {
+    text-align: center;
+  
+    .c_form2_text {
+    font-size: 2.4rem;
+    }
+    .contact_btn {
+      margin: 5rem 0 10.1rem 0;
+    }
+  }
+}

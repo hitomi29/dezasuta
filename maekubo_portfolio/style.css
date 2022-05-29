@@ -60,8 +60,6 @@ body {
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 10px;
-  height: 650px;
-  outline: 1px solid #000;
 }
 
 #about h2, #service h2, #work h2 {
@@ -73,8 +71,6 @@ body {
 }
 
 #header .header_wrap {
-  height: 650px;
-  outline: 1px solid #000;
   position: relative;
 }
 
@@ -110,7 +106,7 @@ body {
   font-family: "A1 Mincho", "游明朝", YuMincho, "Hiragino Mincho ProN W3", "ヒラギノ明朝 ProN W3", "Hiragino Mincho ProN", "HG明朝E", "ＭＳ Ｐ明朝", "ＭＳ 明朝", serif;
   line-height: 1.6;
   letter-spacing: 0.05em;
-  padding: 12rem 0 0 25rem;
+  padding: 12rem 0 16rem 25rem;
 }
 
 #header .header_wrap .main_visual1 {
@@ -195,10 +191,18 @@ body {
 
 #about .about_sec {
   background: url(images/About_back2_pc.svg) no-repeat center/cover;
+  height: 65rem;
 }
 
 #about .about_sec .container {
   position: relative;
+  margin-bottom: 9.6rem;
+}
+
+#about .about_sec .container .about_back {
+  position: absolute;
+  top: -10rem;
+  z-index: -1;
 }
 
 #about .about_sec .container .about_h2 img {
@@ -213,6 +217,10 @@ body {
       -ms-flex-pack: center;
           justify-content: center;
   margin-top: -6rem;
+}
+
+#about .about_sec .container .about_box .about_right {
+  position: relative;
 }
 
 #about .about_sec .container .about_box .about_right p {
@@ -230,7 +238,21 @@ body {
   font-weight: bold;
 }
 
-#service ul {
+#about .about_sec .container .about_box .about_right .readmore_btn1 {
+  position: absolute;
+  right: 5rem;
+  bottom: 6rem;
+}
+
+#about .about_sec .container .about_box .about_right .readmore_btn1 a:hover {
+  opacity: 0.8;
+}
+
+#service .service_sec {
+  margin-bottom: 10.8rem;
+}
+
+#service .service_sec ul {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -240,49 +262,62 @@ body {
   margin-top: 6rem;
 }
 
-#service ul li {
+#service .service_sec ul li {
   width: 30%;
   text-align: center;
 }
 
-#service ul li .service_icon img {
+#service .service_sec ul li .service_icon img {
   height: 10rem;
 }
 
-#service ul li .service_title {
+#service .service_sec ul li .service_title {
   font-size: 2.8rem;
   margin: 6rem 0  6rem 0;
 }
 
-#service ul li .service_text {
+#service .service_sec ul li .service_text {
   font-size: 1.6rem;
   line-height: 1.6;
   letter-spacing: 0.05em;
   text-align: justify;
 }
 
-#work {
-  height: 650px;
-  outline: 1px solid #000;
+#work .work_sec {
+  margin-bottom: 12.2rem;
 }
 
-#work .work_list ul {
+#work .work_sec .work_list ul {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  margin-top: 5rem;
+  margin-top: 2rem;
 }
 
-#work .work_list ul li {
+#work .work_sec .work_list ul li {
   width: 20%;
 }
 
-#work .work_list ul li img {
+#work .work_sec .work_list ul li img {
   width: 100%;
+}
+
+#work .work_sec .readmore_btn2 {
+  margin-top: 2rem;
+  text-align: center;
+}
+
+#work .work_sec .readmore_btn2 a:hover {
+  opacity: 0.8;
+}
+
+#contact {
+  /* タブレットレスポンシブ */
 }
 
 #contact .contact_wrap {
   background: url(images/Contact_back_pc.png) no-repeat bottom/cover;
+  height: 65rem;
   z-index: -1;
 }
 
@@ -345,17 +380,151 @@ body {
       -ms-flex-pack: center;
           justify-content: center;
   margin-top: 10rem;
+  font-size: 3.6rem;
+  color: #1B333F;
 }
 
 #contact .contact_wrap .fs_icons .instagram {
-  font-size: 4.8rem;
-  color: #1B333F;
-  margin-right: 3.5rem;
+  margin-right: 2rem;
 }
 
 #contact .contact_wrap .fs_icons .twitter {
-  font-size: 4.8rem;
-  color: #1B333F;
-  margin-left: 3.5rem;
+  margin-left: 2rem;
+}
+
+@media screen and (max-width: 1100px) {
+  #contact .main_text {
+    font-size: 1.8rem;
+  }
+}
+
+.about_page_sec {
+  background: url(images/About2_back_pc.jpg) no-repeat center/cover;
+}
+
+.about_page_sec .container {
+  margin-bottom: 13rem;
+}
+
+.about_page_sec .container .profile_left p img {
+  -webkit-box-shadow: 50px 43px 93px -17px #999999;
+          box-shadow: 50px 43px 93px -17px #999999;
+  border-radius: 0px;
+}
+
+.about_page_sec .container .about_page_h2 {
+  text-align: center;
+  margin: 8rem 0 7.5rem 0;
+}
+
+.about_page_sec .container .about_page_text {
+  text-align: center;
+  font-size: 3.6rem;
+  font-family: "A1 Mincho", "游明朝", YuMincho, "Hiragino Mincho ProN W3", "ヒラギノ明朝 ProN W3", "Hiragino Mincho ProN", "HG明朝E", "ＭＳ Ｐ明朝", "ＭＳ 明朝", serif;
+  line-height: 2;
+  letter-spacing: 0.1em;
+  margin-bottom: 12.7rem;
+}
+
+.about_page_sec .container .profile_box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.about_page_sec .container .profile_box .profile_right {
+  width: 51.25%;
+}
+
+.about_page_sec .container .profile_box .profile_right .profile_text1 {
+  letter-spacing: 0.05em;
+}
+
+.about_page_sec .container .profile_box .profile_right .profile_name {
+  font-size: 3.6rem;
+  margin-bottom: 3.5rem;
+}
+
+.about_page_sec .container .profile_box .profile_right .profile_title {
+  font-size: 2.4rem;
+  margin-bottom: 2.5rem;
+}
+
+.about_page_sec .container .profile_box .profile_right .profile_text {
+  font-size: 1.6rem;
+  line-height: 1.5;
+  text-align: justify;
+  margin-bottom: 3.5rem;
+}
+
+.about_page_sec .container .profile_box .profile_right .profile_box2 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  border-top: 1px solid #28211C;
+}
+
+.about_page_sec .container .profile_box .profile_right .profile_box2 .profile_title1 {
+  padding-top: 2rem;
+}
+
+.about_page_sec .container .profile_box .profile_right .profile_box3 {
+  padding-right: 2rem;
+  border-right: 1px solid #28211C;
+}
+
+.about_page_sec .container .profile_box .profile_right .profile_box3 ul li p {
+  margin-bottom: 1.6rem;
+}
+
+.about_page_sec .container .profile_box .profile_right .profile_box4 {
+  padding-left: 2rem;
+}
+
+.about_page_sec .container .profile_box .profile_right .profile_box4 ul li p {
+  font-size: 1.6rem;
+  margin-bottom: 1.6rem;
+}
+
+.about_page_sec .c_form2 {
+  text-align: center;
+}
+
+.about_page_sec .c_form2 .c_form2_text {
+  font-size: 2.4rem;
+}
+
+.about_page_sec .c_form2 .contact_btn {
+  margin: 5rem 0 10.1rem 0;
+}
+
+.work_page_sec .container .work_page_h2 {
+  text-align: center;
+  margin: 8rem 0 7.5rem 0;
+}
+
+.work_page_sec .container .work_title {
+  font-size: 3.6rem;
+  margin: 1.5rem 0 2.5rem 0;
+}
+
+.work_page_sec .container .work_text {
+  font-size: 1.6rem;
+  line-height: 1.6;
+}
+
+.work_page_sec .c_form2 {
+  text-align: center;
+}
+
+.work_page_sec .c_form2 .c_form2_text {
+  font-size: 2.4rem;
+}
+
+.work_page_sec .c_form2 .contact_btn {
+  margin: 5rem 0 10.1rem 0;
 }
 /*# sourceMappingURL=style.css.map */
