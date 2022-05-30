@@ -7,6 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css">
   <title>etoile design</title>
   <link rel="stylesheet" type="text/css" href="css/9-1-1.css">
@@ -22,13 +23,25 @@
   <!-- ヘッダー -->
   <header id="header">
     <div class="header_wrap">
-      <nav class="pc_nav">
+      <div class="pc_nav">
+        <nav>
+          <ul>
+            <li><a href="about.html">ABOUT</a></li>
+            <li><a href="#service">SERVICE</a></li>
+            <li>
+              <h1 class="logo"><a href="#header"><img src="images/logo1.svg" alt="etoile design ロゴ"></a></h1>
+            </li>
+            <li><a href="work.html">WORK</a></li>
+            <li><a href="#contact">CONTACT</a></li>
+          </ul>
+        </nav>
+      </div>
+      <!-- ハンバーガーメニュー -->
+      <div class="sp_btn"><span></span></div>
+      <nav class="sp_nav">
         <ul>
           <li><a href="about.html">ABOUT</a></li>
           <li><a href="#service">SERVICE</a></li>
-          <li>
-            <h1 class="logo"><a href="#header"><img src="images/logo1.svg" alt="etoile design ロゴ"></a></h1>
-          </li>
           <li><a href="work.html">WORK</a></li>
           <li><a href="#contact">CONTACT</a></li>
         </ul>
@@ -45,6 +58,7 @@
           <img src="images/main_visual2.png" alt="メイン画像">
         </p>
       </div>
+    </div>
     </div>
   </header>
   <!-- メイン -->
@@ -105,8 +119,7 @@
                 </p>
                 <h3 class="service_title">Coding</h3>
                 <p class="service_text">
-                  HTML CSS
-                  Javascript(jQuery)を使用し動きのある幅広いデザインを細かく再現することが可能です。SEO対策もしっかりと行います。ご自身で更新が可能なWordpressにも対応しております。
+                  HTML,CSS,Javascript(jQuery)を使用し動きのある幅広いデザインを細かく再現することが可能です。SEO対策もしっかりと行います。ご自身で更新が可能なWordpressにも対応しております。
                 </p>
               </div>
             </li>
@@ -218,6 +231,14 @@
         },
       ],
     });
+
+    // ハンバーガーメニュー 
+    $(function () {
+      $('.sp_btn,.sp_nav li a').click(function () {
+        $('.sp_nav').fadeToggle();
+        $('.sp_btn').toggleClass('open');
+      });
+    })
   </script>
 </body>
 

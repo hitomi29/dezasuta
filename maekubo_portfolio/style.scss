@@ -55,12 +55,6 @@ body {
     margin: 0 auto;
 }
 
-section {
-  // 後で消す
-  // height: 650px;
-  // outline: 1px solid #000;
-}
-
 .container {
     max-width: 1200px;
     margin: 0 auto;
@@ -87,7 +81,7 @@ section {
 #header {
     .header_wrap {
 // 後で消す
-      //  outline: 1px solid #000;
+      // outline: 1px solid #000;
        position: relative;
       ul {
         display: flex;
@@ -126,18 +120,15 @@ section {
         position: absolute;
         top: 0;
         right: 0;
-        // z-index: -1;
-
-          img {
-            width: 400px;
-          }
+        z-index: -1;
+        width: 28.8%;
       }
 
       .main_visual2 {
         position: absolute;
-        top: 11rem;
-        left: 5.21%;
-        // z-index: -1;
+        top: 15rem;
+        left: 13rem;
+        width: 12.14%;
       }
 
       .scrolldown{
@@ -183,6 +174,9 @@ section {
         opacity: 0;
       }
     }
+    .sp_nav,.sp_btn {
+      display: none;
+    }
   }
 }
 
@@ -211,15 +205,21 @@ section {
           justify-content: center;
           margin-top: -6rem;
 
+        .about_left {
+          width: 45.83%;
+        }
         .about_right {
           position: relative;
+          width: 54.17%;
+      
           p {
             font-size: $fs16;
             line-height: 2.1;
             letter-spacing: 0.05em;
             background-color: #fff;
             margin-top: 7rem;
-            padding: 3rem 5.5rem 6rem 5rem;
+            align-items: center;
+            padding: 3rem 8rem 8rem 5rem;
             box-shadow:39px 0px 39px -30px rgba(0, 0, 0, 0.2) inset;
           }
   
@@ -229,16 +229,16 @@ section {
           .readmore_btn1 {
             position: absolute;
             right: 5rem;
-            bottom: 6rem;
+            bottom: 4rem;
             a:hover {
               opacity: 0.8;
-            }
             }
           }
         }
       }
-      }
     }
+   }
+  }
   // Service
   #service {
   .service_sec {
@@ -255,7 +255,6 @@ section {
           
           .service_icon {
             img {
-              // display: inline-block;
               height: 10rem;
           }
         }
@@ -282,7 +281,7 @@ section {
     // height: 650px;
     // outline: 1px solid #000;
   .work_sec {
-    margin-bottom: 12.2rem;
+    margin-bottom: 7.4rem;
 
     .work_list {
       ul {
@@ -297,7 +296,7 @@ section {
       }
     }
    .readmore_btn2 {
-     margin-top: 2rem;
+     margin-top: 5rem;
      text-align: center;
 
      a:hover {
@@ -328,8 +327,8 @@ section {
       }
 
     .contact_right {
-      margin-top: 10rem;
-
+      margin-top: 12rem;
+      position: relative;
          .c_form {
           width: 60rem;
              .c_form_box {
@@ -351,8 +350,16 @@ section {
             margin-top: 2rem;
             }
             textarea {
-              height:  15rem;
+            height:  15rem;
           } 
+
+          .submit-btn {
+          position: absolute;
+          right: 18rem;
+          bottom: -6rem;
+          }
+        }
+          }
           }
       }
       
@@ -371,14 +378,155 @@ section {
             }
 
       }
+  
+    /* タブレットレスポンシブ */
+    @media screen and (max-width: 1100px) {
+      #header {
+          .header_wrap {
+            .main_visual_text {
+              
+              .main_text {
+                font-size: 3.2rem;
+               }
+            }
+            .main_visual2 {
+              top: 10rem;
+              left: 13rem;
+              width: 12.14%;
+            }
+
+/* ハンバーガーメニュー */
+.pc_nav {
+  display: none;
+ }
+.sp_btn {
+  display: block;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  height: 33px;
+  cursor: pointer;
+  z-index: 99;
+  }
+.sp_btn span {
+  display: block;
+  background-color: #28211C;
+  width: 33px;
+  height: 3px;
+  position: relative;
+  top: 10px;
+  transition: 0.3s;
+  }
+.sp_btn span::before,.sp_btn span::after{
+  display: block;
+  content: "";
+  background-color: #28211C;
+  width: 33px;
+  height: 3px;
+  position: absolute;
+  transition: 0.3s;
+  }
+.sp_btn span::before {
+  bottom: 10px;
+  }
+.sp_btn span::after {
+  top: 10px;
+  }
+
+/* オープン */
+.open span {
+  background: transparent;
+  }
+.open span::before {
+  bottom: 0px;
+  transform: rotate(45deg);
+  }
+.open span::after{
+  top: 0px;
+  transform: rotate(135deg);
+  }
+
+/* 開いた時 */
+.sp_nav {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  background: rgba(170,198,214,0.8);
+  width: 100%;
+  z-index: 10;
+  }
+.sp_nav ul {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  }
+.sp_nav ul li {
+  color: #28211C;;
+  font-size: 2.4rem;
+  padding: 20px 0;
+  text-align: center;
+  font-family: "游ゴシック体", YuGothic, "游ゴシック Medium",
+              "Yu Gothic Medium", "游ゴシック", "Yu Gothic", sans-serif;
+  }
+  }
+  }
+ }
+          
+  /* spレスポンシブ */
+ @media screen and (max-width: 767px) {
+      #header {
+        .header_wrap {
+          .main_visual_text {  
+            .main_text {
+              font-size: 5.22vw;
+             }
+          }
+      }
+
     }
+
+    #service {
+      .service_sec {
+        ul {
+          display: block;
+          li {
+            width: 100%;
+            padding: 0 5.3rem;
+            box-sizing: border-box;
+            margin-bottom: 5.3rem;
+              .service_title {
+                font-size: $fs18;
+                margin:2.5rem 0  2.5rem 0;
+              }
+              .service_text {
+                line-height: 1.25;
+                letter-spacing: 0.03em;
+              }
+        }
+      }
     }
+  }
+
+    #contact {
+      .contact_wrap {
+        .contact_box {
+          display: block;
+        }
+   }
+  }
+ }
+
 
 // 下層Aboutページ
 .about_page_sec {
 
-background: url(images/About2_back_pc.jpg)no-repeat center /cover;
+  background: url(images/About2_back_pc.jpg)no-repeat center /cover;
+
   .container {
+
     margin-bottom: 13rem;
     .profile_left {
       p {
@@ -454,6 +602,7 @@ margin: 8rem 0 7.5rem 0;
       }
     }
   }
+}
 
   .profile_box4 {
     padding-left: 2rem;
@@ -467,8 +616,7 @@ margin: 8rem 0 7.5rem 0;
       }
     }
   }
-}
-  }
+}  
 }
 .c_form2 {
   text-align: center;
@@ -481,6 +629,25 @@ margin: 8rem 0 7.5rem 0;
   }
 }
 }
+
+// Aboutページspレスポンシブ
+@media screen and (max-width: 787px) {
+  .about_page_sec {
+  
+    .container {
+
+      .profile_box {
+        display: block;
+    }
+    .about_page_text {
+      font-size: 4.26vw;
+    }
+  }
+
+}
+}
+
+
 // 下層Workページ
 .work_page_sec {
 
@@ -493,12 +660,49 @@ margin: 8rem 0 7.5rem 0;
     .work_title {
       font-size: 3.6rem;
       margin: 1.5rem 0 2.5rem 0;
+      border-left: 5px solid #28211C;
+      padding-left: 1rem;
     }
 
     .work_text {
+      text-align: justify;
       font-size: $fs16;
       line-height: 1.6;
+      margin-bottom: 4.5rem;
     }
+
+    .work_box {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+
+    .work_box1 {
+      width: 47.5%;
+    }
+
+
+    .work_box3 {
+      display: flex;
+      font-size: $fs16;
+      margin-bottom: 5rem;
+
+      p {
+        line-height: 1.8;
+      }
+    }
+
+    .work_box4 {
+      display: flex;
+      padding-right: 5rem;
+      border-right: 1px solid #28211C;
+      line-height: 1.8;
+    }
+
+    .work_box5 {
+      padding-left: 5rem;
+    }
+
+  }
 
   }
   .c_form2 {
@@ -506,9 +710,20 @@ margin: 8rem 0 7.5rem 0;
   
     .c_form2_text {
     font-size: 2.4rem;
+    margin-top: 10rem;
     }
     .contact_btn {
       margin: 5rem 0 10.1rem 0;
     }
   }
 }
+// Workページspレスポンシブ
+@media screen and (max-width: 787px) {
+  .work_page_sec {
+    .container {
+      .work_box {
+       display: block;
+      }
+    } 
+    } 
+  }
