@@ -203,7 +203,7 @@ body {
         .about_box {
           display: flex;
           justify-content: center;
-          margin-top: -6rem;
+          align-items: center;
 
         .about_left {
           width: 45.83%;
@@ -217,7 +217,6 @@ body {
             line-height: 2.1;
             letter-spacing: 0.05em;
             background-color: #fff;
-            margin-top: 7rem;
             align-items: center;
             padding: 3rem 8rem 8rem 5rem;
             box-shadow:39px 0px 39px -30px rgba(0, 0, 0, 0.2) inset;
@@ -371,10 +370,7 @@ body {
         font-size: 3.6rem;
         color:#1B333F;
             .instagram {
-              margin-right: 2rem;
-            }
-            .twitter {
-              margin-left: 2rem;
+              margin-right: 4rem;
             }
 
       }
@@ -394,6 +390,15 @@ body {
               left: 13rem;
               width: 12.14%;
             }
+            #about {
+              .about_sec {
+                .container {
+                  .about_h2 {
+                        z-index: 99;
+                }
+              } 
+            }
+            } 
 
 /* ハンバーガーメニュー */
 .pc_nav {
@@ -474,7 +479,6 @@ body {
   }
   }
  }
-          
   /* spレスポンシブ */
  @media screen and (max-width: 767px) {
       #header {
@@ -482,14 +486,69 @@ body {
           .main_visual_text {  
             .main_text {
               font-size: 5.22vw;
+              padding:35.4rem 0 14.3rem 2rem;
              }
+          }
+          .main_visual1 {
+            width: 25.9rem;
+          }
+          .main_visual2 {
+            width: 7.5rem;
+            top: 30rem;
+            left: 2rem
           }
       }
 
     }
-
+    #about {
+      .about_sec {
+        .container {
+          .about_back {
+            display: none;
+          }
+          .about_box {
+            display: block;
+            .about_left {
+              width: 100%;
+            }
+            .about_left {
+              .about_pic {
+                text-align: right;
+                img {
+                width: 30rem
+                }
+              }
+            }
+            .about_right {
+              p {
+                padding: 0;
+                box-shadow: none;
+              }
+              .readmore_btn1 {
+                width: 6.8rem;
+            
+              }
+            }
+          }
+          .about_h2 {
+            img {
+              width: 16.7rem;
+              margin:-2rem 0 2rem 0;
+            }
+          }
+        }
+      }
+    } 
     #service {
       .service_sec {
+        .container {
+          h2 {
+            img {
+              width: 20.9rem;
+              margin-top: 5rem;
+            }
+          }
+        }
         ul {
           display: block;
           li {
@@ -509,13 +568,54 @@ body {
       }
     }
   }
-
+    #work {
+      .work_sec {
+        h2 {
+          img {
+            width: 15rem;
+          }
+        }
+      .readmore_btn2 {
+        img {
+          width: 6.8rem;
+        }
+      }  
+      }
+    }
     #contact {
       .contact_wrap {
+           background: url(images/Contact_back_sp@2x.png) no-repeat bottom /cover;
         .contact_box {
           display: block;
+          .contact_left {
+            img {
+              width: 21.6rem;
+            }
+            .contact_text {
+              text-align: center;
+              margin: 3.5rem 0 3.5em 0;
+            }
+          }
+          .contact_right {
+            margin-top: 0;
+            .c_form {
+              input[type="text"] {
+                width: 30rem;
+              }
+              .textarea {
+                width: 30rem;
+              }
+              .c_form_box {
+                display: block;
+
+              }
+            }
+            }
         }
    }
+   .fs_icons {
+    margin-top: 6rem;
+  }  
   }
  }
 
@@ -524,7 +624,6 @@ body {
 .about_page_sec {
 
   background: url(images/About2_back_pc.jpg)no-repeat center /cover;
-
   .container {
 
     margin-bottom: 13rem;
@@ -551,14 +650,29 @@ margin: 8rem 0 7.5rem 0;
   line-height: 2;              
   letter-spacing: 0.1em;
   margin-bottom: 12.7rem;
+  .br_1 {
+    display: none;
+  }
+  .br_2 {
+    display: block;
+  }
 }
 
 .profile_box {
   display: flex;
   justify-content: space-between;
+.profile_left {
+  width: 45%;
+  .fs_icons {
+        .instagram {
+          margin-right: 7.5rem;
+        }
 
+  }
+}
 .profile_right {
-  width: 51.25%;
+  width: 55%;
+  padding-left: 5%;
 
   .profile_text1 {
     letter-spacing: 0.05em;
@@ -592,10 +706,13 @@ margin: 8rem 0 7.5rem 0;
   }
 
   .profile_box3 {
-    padding-right: 2rem;
     border-right: 1px solid #28211C;
+
     ul {
+      display: flex;
+      flex-wrap: wrap;
       li {
+        width: 50%;
         p {
           margin-bottom: 1.6rem;
         }
@@ -605,6 +722,7 @@ margin: 8rem 0 7.5rem 0;
 }
 
   .profile_box4 {
+    width: 65%;
     padding-left: 2rem;
 
     ul {
@@ -629,23 +747,85 @@ margin: 8rem 0 7.5rem 0;
   }
 }
 }
+// Aboutページタブレットレスポンシブ
+@media screen and (max-width: 1100px) {
+  .about_page_sec {
+  
+    .container {
+      .about_page_text {
+        font-size: 3rem;
+      }
+    }
+  }
+}
 
 // Aboutページspレスポンシブ
 @media screen and (max-width: 787px) {
   .about_page_sec {
-  
+  background: none;
     .container {
 
+      .about_page_h2 {
+        img {
+          width: 10rem;
+          margin:5rem auto 1.7rem;
+        }
+      }
+      .about_page_text {
+        margin-bottom: 5.3rem;
+      }
       .profile_box {
         display: block;
-    }
-    .about_page_text {
-      font-size: 4.26vw;
+       .profile_left {
+         width: 100%;
+         margin-bottom: 5rem;
+       }
+       .profile_right {
+         width: 100%;
+         padding-left: 0;
+         .profile_name {
+           font-size: 2.4rem;
+         }
+         .profile_birth {
+           font-size: $fs18;
+         }
+         .profile_title {
+           font-size: 2.1rem;
+           font-weight: bold;
+         }
+         .profile_text {
+           font-size: 4.27vw;
+         }
+         .profile_box2 {
+           display: block;
+           border: none;
+         }
+         .profile_box3 {
+           border: none;
+           ul {
+             display: block;
+           }
+         }
+         .profile_box4 {
+           width: 100%;
+           padding-left: 0;
+         }
+       }
+        
+          }
+      .about_page_text {
+        font-size: 4.27vw;
+        .br_1 {
+          display: block;
+        }
+        .br_2 {
+          display: none;
+        }
+          }
+        }
     }
   }
 
-}
-}
 
 
 // 下層Workページ
@@ -659,7 +839,7 @@ margin: 8rem 0 7.5rem 0;
 
     .work_title {
       font-size: 3.6rem;
-      margin: 1.5rem 0 2.5rem 0;
+      margin: 1.5rem 0 1.5rem 0;
       border-left: 5px solid #28211C;
       padding-left: 1rem;
     }
@@ -668,7 +848,7 @@ margin: 8rem 0 7.5rem 0;
       text-align: justify;
       font-size: $fs16;
       line-height: 1.6;
-      margin-bottom: 4.5rem;
+      margin-bottom: 2rem;
     }
 
     .work_box {
@@ -679,7 +859,6 @@ margin: 8rem 0 7.5rem 0;
     .work_box1 {
       width: 47.5%;
     }
-
 
     .work_box3 {
       display: flex;
@@ -696,10 +875,12 @@ margin: 8rem 0 7.5rem 0;
       padding-right: 5rem;
       border-right: 1px solid #28211C;
       line-height: 1.8;
+      font-size: $fs16;
     }
 
     .work_box5 {
       padding-left: 5rem;
+      font-size: $fs16;
     }
 
   }
@@ -711,6 +892,7 @@ margin: 8rem 0 7.5rem 0;
     .c_form2_text {
     font-size: 2.4rem;
     margin-top: 10rem;
+    br {display: none;}
     }
     .contact_btn {
       margin: 5rem 0 10.1rem 0;
@@ -721,9 +903,48 @@ margin: 8rem 0 7.5rem 0;
 @media screen and (max-width: 787px) {
   .work_page_sec {
     .container {
+      .work_page_h2  { 
+        img {
+          width: 10rem;
+          margin: 5rem auto 5rem;
+        }
+      }
+      .work_title {
+        font-size: $fs18;
+      }
+      .work_text{
+        font-size: 1.2rem;
+      }
       .work_box {
        display: block;
+       .work_box1 {
+         width: 100%;
+       }
+       .work_box3 {
+         display: block;
+       }
+       .work_box4 {
+         border: none;
+         font-size: 1.2rem;
+         .work_tool_list2 {
+          br {display: none;}
+         }
+       }
+      .work_box5 {
+        font-size: 1.2rem;
+        padding-left: 0;
+      }
       }
     } 
-    } 
+    .c_form2 {
+      .c_form2_text {
+        font-size: 1.3rem;
+        margin:5rem 0 1.3rem 0;
+      }
+      .contact_btn {
+        width: 135px;
+        margin: 0 auto 5rem;
+      }
+    }
   }
+}
