@@ -74,6 +74,10 @@ body {
   position: relative;
 }
 
+#header .header_wrap .sp_logo {
+  display: none;
+}
+
 #header .header_wrap ul {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -102,9 +106,9 @@ body {
 
 #header .header_wrap .main_visual_text .main_text {
   color: #AB8438;
-  font-size: 5rem;
+  font-size: calc(32px + 18 * (100vw - 1100px) / 820);
   font-family: "A1 Mincho", "游明朝", YuMincho, "Hiragino Mincho ProN W3", "ヒラギノ明朝 ProN W3", "Hiragino Mincho ProN", "HG明朝E", "ＭＳ Ｐ明朝", "ＭＳ 明朝", serif;
-  line-height: 1.6;
+  line-height: 2;
   letter-spacing: 0.05em;
   padding: 12rem 0 16rem 25rem;
 }
@@ -197,7 +201,6 @@ body {
 
 #about .about_sec .container {
   position: relative;
-  margin-bottom: 9.6rem;
 }
 
 #about .about_sec .container .about_back {
@@ -242,6 +245,14 @@ body {
   padding: 3rem 8rem 8rem 5rem;
   -webkit-box-shadow: 39px 0px 39px -30px rgba(0, 0, 0, 0.2) inset;
           box-shadow: 39px 0px 39px -30px rgba(0, 0, 0, 0.2) inset;
+}
+
+#about .about_sec .container .about_box .about_right p .sp_br {
+  display: none;
+}
+
+#about .about_sec .container .about_box .about_right p .pc_br1 {
+  display: block;
 }
 
 #about .about_sec .container .about_box .about_right .text_bold {
@@ -323,8 +334,8 @@ body {
 
 #contact .contact_wrap {
   background: url(images/Contact_back_pc.png) no-repeat bottom/cover;
-  height: 65rem;
   z-index: -1;
+  height: 65rem;
 }
 
 #contact .contact_wrap .contact_box {
@@ -381,49 +392,65 @@ body {
 
 #contact .contact_wrap .contact_box .contact_right .c_form .submit-btn {
   position: absolute;
-  right: 18rem;
+  right: 15rem;
   bottom: -6rem;
 }
 
-.fs_icons {
+#contact .contact_wrap .contact_box .contact_right .c_form .submit-btn input {
+  width: 10rem;
+  height: 3rem;
+  background-color: transparent;
+}
+
+#contact .contact_wrap .fs_icons {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  margin-top: 10rem;
-  font-size: 3.6rem;
+  margin-top: 15rem;
+  font-size: 2.4rem;
   color: #1B333F;
 }
 
-.fs_icons .instagram {
+#contact .contact_wrap .fs_icons .instagram {
   margin-right: 4rem;
+}
+
+/* scrollify.jsに関係する記述はここかから */
+.scrollify {
+  width: 100%;
+  height: 100vh;
 }
 
 /* タブレットレスポンシブ */
 @media screen and (max-width: 1100px) {
-  #header .header_wrap {
-    /* ハンバーガーメニュー */
-    /* オープン */
-    /* 開いた時 */
+  #header .header_wrap .sp_logo {
+    display: block;
+    width: 10rem;
+    padding: 2rem 0 0 2rem;
   }
   #header .header_wrap .main_visual_text .main_text {
-    font-size: 3.2rem;
+    font-size: calc(18px + 14 * (100vw - 787px) / 313);
   }
   #header .header_wrap .main_visual2 {
-    top: 10rem;
+    top: 20rem;
     left: 13rem;
     width: 12.14%;
   }
-  #header .header_wrap #about .about_sec .container .about_h2 {
+  #about .about_sec {
+    height: 65rem;
+  }
+  #about .about_sec .container .about_h2 {
     z-index: 99;
   }
-  #header .header_wrap .pc_nav {
+  /* ハンバーガーメニュー */
+  .pc_nav {
     display: none;
   }
-  #header .header_wrap .sp_btn {
-    display: block;
+  .sp_btn {
+    display: block !important;
     position: absolute;
     top: 20px;
     right: 20px;
@@ -431,7 +458,7 @@ body {
     cursor: pointer;
     z-index: 99;
   }
-  #header .header_wrap .sp_btn span {
+  .sp_btn span {
     display: block;
     background-color: #28211C;
     width: 33px;
@@ -441,7 +468,7 @@ body {
     -webkit-transition: 0.3s;
     transition: 0.3s;
   }
-  #header .header_wrap .sp_btn span::before, #header .header_wrap .sp_btn span::after {
+  .sp_btn span::before, .sp_btn span::after {
     display: block;
     content: "";
     background-color: #28211C;
@@ -451,26 +478,28 @@ body {
     -webkit-transition: 0.3s;
     transition: 0.3s;
   }
-  #header .header_wrap .sp_btn span::before {
+  .sp_btn span::before {
     bottom: 10px;
   }
-  #header .header_wrap .sp_btn span::after {
+  .sp_btn span::after {
     top: 10px;
   }
-  #header .header_wrap .open span {
+  /* オープン */
+  .open span {
     background: transparent;
   }
-  #header .header_wrap .open span::before {
+  .open span::before {
     bottom: 0px;
     -webkit-transform: rotate(45deg);
             transform: rotate(45deg);
   }
-  #header .header_wrap .open span::after {
+  .open span::after {
     top: 0px;
     -webkit-transform: rotate(135deg);
             transform: rotate(135deg);
   }
-  #header .header_wrap .sp_nav {
+  /* 開いた時 */
+  .sp_nav {
     position: absolute;
     top: 0;
     left: 0;
@@ -479,7 +508,7 @@ body {
     width: 100%;
     z-index: 10;
   }
-  #header .header_wrap .sp_nav ul {
+  .sp_nav ul {
     height: 100%;
     width: 100%;
     display: -webkit-box;
@@ -493,7 +522,7 @@ body {
         -ms-flex-pack: center;
             justify-content: center;
   }
-  #header .header_wrap .sp_nav ul li {
+  .sp_nav ul li {
     color: #28211C;
     font-size: 2.4rem;
     padding: 20px 0;
@@ -504,9 +533,12 @@ body {
 
 /* spレスポンシブ */
 @media screen and (max-width: 767px) {
+  #header .header_wrap .sp_logo {
+    width: 7.5rem;
+  }
   #header .header_wrap .main_visual_text .main_text {
-    font-size: 5.22vw;
-    padding: 35.4rem 0 14.3rem 2rem;
+    font-size: 4.8vw;
+    padding: 26.7rem 0 23rem 2rem;
   }
   #header .header_wrap .main_visual1 {
     width: 25.9rem;
@@ -516,52 +548,82 @@ body {
     top: 30rem;
     left: 2rem;
   }
+  #about .about_sec {
+    background: url(images/About_back2_sp@2x.png) no-repeat center/auto;
+    position: relative;
+    height: 72.5rem;
+  }
   #about .about_sec .container .about_back {
     display: none;
-  }
-  #about .about_sec .container .about_box {
-    display: block;
-  }
-  #about .about_sec .container .about_box .about_left {
-    width: 100%;
-  }
-  #about .about_sec .container .about_box .about_left .about_pic {
-    text-align: right;
-  }
-  #about .about_sec .container .about_box .about_left .about_pic img {
-    width: 30rem;
-  }
-  #about .about_sec .container .about_box .about_right p {
-    padding: 0;
-    -webkit-box-shadow: none;
-            box-shadow: none;
-  }
-  #about .about_sec .container .about_box .about_right .readmore_btn1 {
-    width: 6.8rem;
   }
   #about .about_sec .container .about_h2 img {
     width: 16.7rem;
     margin: -2rem 0 2rem 0;
   }
+  #about .about_sec .container .about_box {
+    display: block;
+    position: relative;
+  }
+  #about .about_sec .container .about_box .about_left {
+    width: 100%;
+    position: absolute;
+    top: -2rem;
+    right: -1rem;
+    z-index: 1;
+  }
+  #about .about_sec .container .about_box .about_left .about_pic {
+    text-align: right;
+  }
+  #about .about_sec .container .about_box .about_left .about_pic img {
+    width: 33.5rem;
+  }
+  #about .about_sec .container .about_box .about_right {
+    width: 90%;
+    position: absolute;
+    top: 22rem;
+    left: -1rem;
+  }
+  #about .about_sec .container .about_box .about_right p {
+    font-size: 1.6rem;
+    padding: 6rem 3.6rem 3rem 3.6rem;
+    -webkit-box-shadow: none;
+            box-shadow: none;
+    line-height: 2;
+  }
+  #about .about_sec .container .about_box .about_right p .sp_br {
+    display: block;
+  }
+  #about .about_sec .container .about_box .about_right p .pc_br {
+    display: none;
+  }
+  #about .about_sec .container .about_box .readmore_btn1 {
+    width: 6.8rem;
+    position: relative;
+  }
+  #about .about_sec .container .about_box .readmore_btn1 img {
+    position: absolute;
+    right: -5rem;
+    top: -1rem;
+  }
   #service .service_sec .container h2 img {
     width: 20.9rem;
     margin-top: 5rem;
   }
-  #service .service_sec ul {
+  #service .service_sec .container ul {
     display: block;
   }
-  #service .service_sec ul li {
+  #service .service_sec .container ul li {
     width: 100%;
     padding: 0 5.3rem;
     -webkit-box-sizing: border-box;
             box-sizing: border-box;
     margin-bottom: 5.3rem;
   }
-  #service .service_sec ul li .service_title {
+  #service .service_sec .container ul li .service_title {
     font-size: 1.8rem;
     margin: 2.5rem 0  2.5rem 0;
   }
-  #service .service_sec ul li .service_text {
+  #service .service_sec .container ul li .service_text {
     line-height: 1.25;
     letter-spacing: 0.03em;
   }
@@ -572,32 +634,57 @@ body {
     width: 6.8rem;
   }
   #contact .contact_wrap {
-    background: url(images/Contact_back_sp@2x.png) no-repeat bottom/cover;
+    background: url(images/Contact_back_sp@2x.png) no-repeat bottom/auto;
+    height: 70rem;
   }
   #contact .contact_wrap .contact_box {
     display: block;
   }
+  #contact .contact_wrap .contact_box .contact_left h2 {
+    text-align: center;
+  }
   #contact .contact_wrap .contact_box .contact_left img {
     width: 21.6rem;
+    margin-top: -2rem;
   }
   #contact .contact_wrap .contact_box .contact_left .contact_text {
-    text-align: center;
-    margin: 3.5rem 0 3.5em 0;
+    font-size: 1.4rem;
+    padding-left: 3rem;
+    margin: 3.5rem 0 1.5em 0;
   }
   #contact .contact_wrap .contact_box .contact_right {
     margin-top: 0;
+    padding-left: 1.5rem;
+  }
+  #contact .contact_wrap .contact_box .contact_right .c_form {
+    width: 100%;
+  }
+  #contact .contact_wrap .contact_box .contact_right .c_form label {
+    display: block;
   }
   #contact .contact_wrap .contact_box .contact_right .c_form input[type="text"] {
-    width: 30rem;
+    width: 33.5rem;
+    height: 2.5rem;
+    margin-top: 0.5rem;
   }
-  #contact .contact_wrap .contact_box .contact_right .c_form .textarea {
-    width: 30rem;
+  #contact .contact_wrap .contact_box .contact_right .c_form textarea {
+    margin-top: 0.5rem;
+    width: 33.5rem;
   }
   #contact .contact_wrap .contact_box .contact_right .c_form .c_form_box {
     display: block;
   }
-  #contact .fs_icons {
-    margin-top: 6rem;
+  #contact .contact_wrap .contact_box .contact_right .c_form .submit-btn {
+    position: absolute;
+    right: 14rem;
+    bottom: -5rem;
+  }
+  #contact .contact_wrap .fs_icons {
+    font-size: 2rem;
+    margin-top: 10rem;
+  }
+  #contact .contact_wrap .fs_icons .instagram {
+    margin-right: 2rem;
   }
 }
 
@@ -633,10 +720,6 @@ body {
   display: none;
 }
 
-.about_page_sec .container .about_page_text .br_2 {
-  display: block;
-}
-
 .about_page_sec .container .profile_box {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -650,8 +733,19 @@ body {
   width: 45%;
 }
 
+.about_page_sec .container .profile_box .profile_left .fs_icons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-size: 3.6rem;
+  margin-top: 7rem;
+}
+
 .about_page_sec .container .profile_box .profile_left .fs_icons .instagram {
-  margin-right: 7.5rem;
+  margin-right: 4rem;
 }
 
 .about_page_sec .container .profile_box .profile_right {
@@ -711,12 +805,12 @@ body {
   margin-bottom: 1.6rem;
 }
 
-.about_page_sec .container .profile_box .profile_box4 {
+.about_page_sec .container .profile_box .profile_right .profile_box4 {
   width: 65%;
   padding-left: 2rem;
 }
 
-.about_page_sec .container .profile_box .profile_box4 ul li p {
+.about_page_sec .container .profile_box .profile_right .profile_box4 ul li p {
   font-size: 1.6rem;
   margin-bottom: 1.6rem;
 }
@@ -727,6 +821,10 @@ body {
 
 .about_page_sec .c_form2 .c_form2_text {
   font-size: 2.4rem;
+}
+
+.about_page_sec .c_form2 .c_form2_text br {
+  display: none;
 }
 
 .about_page_sec .c_form2 .contact_btn {
@@ -743,9 +841,12 @@ body {
   .about_page_sec {
     background: none;
   }
+  .about_page_sec .container .about_page_h2 {
+    margin: 0;
+  }
   .about_page_sec .container .about_page_h2 img {
-    width: 10rem;
-    margin: 5rem auto 1.7rem;
+    width: 15rem;
+    margin: 5rem auto 5rem;
   }
   .about_page_sec .container .about_page_text {
     margin-bottom: 5.3rem;
@@ -756,6 +857,9 @@ body {
   .about_page_sec .container .profile_box .profile_left {
     width: 100%;
     margin-bottom: 5rem;
+  }
+  .about_page_sec .container .profile_box .profile_left {
+    text-align: center;
   }
   .about_page_sec .container .profile_box .profile_right {
     width: 100%;
@@ -788,14 +892,16 @@ body {
     width: 100%;
     padding-left: 0;
   }
-  .about_page_sec .container .about_page_text {
+  .about_page_sec .container .profile_box .profile_right .profile_box4 ui li p {
     font-size: 4.27vw;
   }
-  .about_page_sec .container .about_page_text .br_1 {
-    display: block;
+  .about_page_sec .c_form2 .c_form2_text {
+    font-size: 1.3rem;
+    margin: 5rem 0 1.3rem 0;
   }
-  .about_page_sec .container .about_page_text .br_2 {
-    display: none;
+  .about_page_sec .c_form2 .contact_btn {
+    width: 135px;
+    margin: 0 auto 5rem;
   }
 }
 
@@ -877,9 +983,12 @@ body {
   margin: 5rem 0 10.1rem 0;
 }
 
-@media screen and (max-width: 787px) {
+@media screen and (max-width: 767px) {
+  .work_page_sec .container .work_page_h2 {
+    margin: 0;
+  }
   .work_page_sec .container .work_page_h2 img {
-    width: 10rem;
+    width: 15rem;
     margin: 5rem auto 5rem;
   }
   .work_page_sec .container .work_title {

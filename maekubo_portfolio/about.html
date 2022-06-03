@@ -22,13 +22,24 @@
   <!-- ヘッダー -->
   <header id="header">
     <div class="header_wrap">
+      <h1 class="sp_logo"><img src="images/logo4.svg" alt="etoile design ロゴ"></h1>
       <nav class="pc_nav">
         <ul>
           <li><a href="about.html">ABOUT</a></li>
           <li><a href="index.html#service">SERVICE</a></li>
           <li>
-            <h1 class="logo"><a href="index.html#header"><img src="images/logo1.svg" alt="etoile design ロゴ"></a></h1>
+            <h1 class="logo"><a href="index.html#header"><img src="images/logo4.svg" alt="etoile design ロゴ"></a></h1>
           </li>
+          <li><a href="work.html">WORK</a></li>
+          <li><a href="index.html#contact">CONTACT</a></li>
+        </ul>
+      </nav>
+      <!-- ハンバーガーメニュー -->
+      <div class="sp_btn"><span></span></div>
+      <nav class="sp_nav">
+        <ul>
+          <li><a href="about.html">ABOUT</a></li>
+          <li><a href="index.html#service">SERVICE</a></li>
           <li><a href="work.html">WORK</a></li>
           <li><a href="index.html#contact">CONTACT</a></li>
         </ul>
@@ -46,7 +57,7 @@
       <div class="profile_box">
         <div class="profile_left">
           <p>
-            <img src="images/500x600.png" alt="">
+            <img src="images/About_pic.jpg" alt="">
           </p>
           <div class="fs_icons">
             <div class="instagram"><i class="fab fa-instagram"></i></div>
@@ -56,7 +67,7 @@
         <div class="profile_right">
           <p class="profile_title">Name</p>
           <p class="profile_name">逵　瞳（つじ　ひとみ）　</p>
-          <p class="profile_title" >Profile</p>
+          <p class="profile_title">Profile</p>
           <p class="profile_text profile_birth">9月29日生まれ｜愛知県名古屋市在住</p>
           <p class="profile_text profile_text1">
             これまで、イタリアとフランスの商品を取扱う外資アパレルで10年間勤務してきました。お客様のニーズに耳を傾け、魅力を引き出し、１人１人に合った最善のご提案を得意としています。プライベートでは海外へ行くことが好きで、五感が刺撃されるたくさんのデザインやカルチャーに触れてきました。これまでの経験から培ってきたことを活かしWebデザインの道へ。
@@ -71,7 +82,7 @@
                 <p class="profile_title profile_title1">使用可能ツール</p>
                 <ul>
                   <li>
-                    <p>■VS visual cord</p>
+                    <p>■VSCode</p>
                   </li>
                   <li>
                     <p>■Illustrator</p>
@@ -104,6 +115,7 @@
         </div>
       </div>
     </div>
+
     <div class="c_form2">
       <p class="c_form2_text">全国どこでもオンライン相談可能です。<br>お気軽にお問合せください。</p>
       <div class="contact_btn">
@@ -111,6 +123,16 @@
       </div>
     </div>
   </div>
+
+  <!-- ハンバーガーメニュー  -->
+  <script>
+    $(function () {
+      $('.sp_btn,.sp_nav li a').click(function () {
+        $('.sp_nav').fadeToggle();
+        $('.sp_btn').toggleClass('open');
+      });
+    })
+  </script>
 </body>
 
 </html>

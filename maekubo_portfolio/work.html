@@ -22,13 +22,24 @@
   <!-- ヘッダー -->
   <header id="header">
     <div class="header_wrap">
+      <h1 class="sp_logo"><img src="images/logo4.svg" alt="etoile design ロゴ"></h1>
       <nav class="pc_nav">
         <ul>
           <li><a href="about.html">ABOUT</a></li>
           <li><a href="index.html#service">SERVICE</a></li>
           <li>
-            <h1 class="logo"><a href="index.html#header"><img src="images/logo1.svg" alt="etoile design ロゴ"></a></h1>
+            <h1 class="logo"><a href="index.html#header"><img src="images/logo4.svg" alt="etoile design ロゴ"></a></h1>
           </li>
+          <li><a href="work.html">WORK</a></li>
+          <li><a href="index.html#contact">CONTACT</a></li>
+        </ul>
+      </nav>
+      <!-- ハンバーガーメニュー -->
+      <div class="sp_btn"><span></span></div>
+      <nav class="sp_nav">
+        <ul>
+          <li><a href="about.html">ABOUT</a></li>
+          <li><a href="index.html#service">SERVICE</a></li>
           <li><a href="work.html">WORK</a></li>
           <li><a href="index.html#contact">CONTACT</a></li>
         </ul>
@@ -175,6 +186,17 @@
         </div>
       </div>
     </div>
+
+    <!-- ハンバーガーメニュー  -->
+    <script>
+      $(function () {
+        $('.sp_btn,.sp_nav li a').click(function () {
+          $('.sp_nav').fadeToggle();
+          $('.sp_btn').toggleClass('open');
+        });
+      })
+    </script>
+
 </body>
 
 </html>
