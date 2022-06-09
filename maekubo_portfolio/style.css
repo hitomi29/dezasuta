@@ -393,6 +393,7 @@ body {
 
 #contact .contact_wrap .contact_box .contact_right .c_form textarea {
   height: 15rem;
+  resize: none;
 }
 
 #contact .contact_wrap .contact_box .contact_right .c_form .submit-btn {
