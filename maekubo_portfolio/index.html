@@ -154,12 +154,12 @@ ZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
         </h2>
         <div class="work_list">
           <ul>
-            <li><img src="images/slider1_pc.jpg" alt="制作物画像"></li>
-            <li><img src="images/slider2_pc.jpg" alt="制作物画像"></li>
-            <li><img src="images/slider3_pc.jpg" alt="制作物画像"></li>
-            <li><img src="images/slider4_pc.jpg" alt="制作物画像"></li>
-            <li><img src="images/slider5_pc.jpg" alt="制作物画像"></li>
-            <li><img src="images/slider6_pc.jpg" alt="制作物画像"></li>
+            <li><a href="work.html"><img src="images/slider1_pc.jpg" alt="制作物画像"></a></li>
+            <li><a href="work.html"><img src="images/slider2_pc.jpg" alt="制作物画像"></a></li>
+            <li><a href="work.html"><img src="images/slider3_pc.jpg" alt="制作物画像"></a></li>
+            <li><a href="work.html"><img src="images/slider4_pc.jpg" alt="制作物画像"></a></li>
+            <li><a href="work.html"><img src="images/slider5_pc.jpg" alt="制作物画像"></a></li>
+            <li><a href="work.html"><img src="images/slider6_pc.jpg" alt="制作物画像"></a></li>
           </ul>
         </div>
         <div class="readmore_btn2">
@@ -233,20 +233,43 @@ ZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
   <!--============== jQuery ===============-->
   <script>
     // GALLERYスライダー
-    $('.work_list ul').slick({
-      slidesToShow: 5,
-      slidesToScroll: 1,
-      arrows: false,
-      autoplay: true,
-      autoplaySpeed: 2000,
-      responsive: [
-        {
-          breakpoint: 787, //786px以下のサイズに適用
-          settings: {
-            slidesToShow: 1,
+    // $('.work_list ul').slick({
+    //   slidesToShow: 5,
+    //   slidesToScroll: 1,
+    //   arrows: false,
+    //   autoplay: true,
+    //   autoplaySpeed: 2000,
+    //   responsive: [
+    //     {
+    //       breakpoint: 787, //786px以下のサイズに適用
+    //       settings: {
+    //         slidesToShow: 1,
+    //         autoplaySpeed: 3000,
+    //       },
+    //     },
+    //   ],
+    // });
+    $(document).ready(function () {
+      $('.work_list ul').slick({
+        slidesToShow: 5,
+        slidesToScroll: 1,
+        autoplay: true,
+        autoplaySpeed: 0,
+        speed: 4000,
+        arrows: false,
+        cssEase: 'linear',
+        infinite: true,
+        responsive: [
+          {
+            breakpoint: 787, //786px以下のサイズに適用
+            settings: {
+              slidesToShow: 1,
+              speed: 5000,
+
+            },
           },
-        },
-      ],
+        ],
+      });
     });
 
     // ハンバーガーメニュー 
