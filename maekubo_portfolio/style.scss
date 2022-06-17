@@ -110,6 +110,9 @@ body {
                 letter-spacing: 0.05em;
                 padding:12rem 0 16rem 25rem;
             }
+            .main_br {
+              display: none;
+            }
       }
 
       .main_visual1 {
@@ -371,7 +374,7 @@ body {
       .fs_icons {
         display: flex;
         justify-content: center;
-        margin: 10rem 0 5rem 0;
+        margin: 8rem 0 5rem 0;
         font-size: 3.6rem;
         color:#1B333F;
             .instagram {
@@ -475,7 +478,7 @@ body {
                 .contact_left {
                   text-align: center;
                   .contact_text {
-                    margin: 4.9rem 0 6.5rem 0;
+                    margin: 4rem 0 4rem 0;
                     font-size: 2.1rem;
                   }
                 }
@@ -506,8 +509,11 @@ body {
               }
             }
             .fs_icons {
-              margin: 3rem 0 3rem 0;
+              margin: 5rem 0 3rem 0;
               font-size: 2.9rem;
+            }
+            .copyright {
+             margin: 2rem 0 0 0;
             }
           }
         }
@@ -600,9 +606,13 @@ body {
           }
           .main_visual_text { 
             .main_text {
-              font-size: 4.8vw;
-              padding:26.7rem 0 14.6rem 2rem;
+              // font-size: 4.8vw;
+              font-size: 7.47vw;
+              padding:26.7rem 0 14.6rem 10rem;
              }
+             .main_br {
+              display: block;
+            }
           }
           .main_visual1 {
             width: 25.9rem;
@@ -902,6 +912,9 @@ margin: 8rem 0 7.5rem 0;
   text-align: center;
   margin-bottom: 5rem;
 }
+.copyright {
+  text-align: center;
+}
 }
 
 // Aboutページタブレットレスポンシブ
@@ -991,6 +1004,7 @@ margin: 8rem 0 7.5rem 0;
         margin: 0 auto 5rem;
       }
     }
+    
   }
 }
 
@@ -1165,4 +1179,10 @@ margin: 8rem 0 7.5rem 0;
       display: block;
     }
   }
+  }
+
+  .copyright {
+    font-size: 1.2rem;
+    text-align: center;
+    margin-bottom: 2rem;
   }
